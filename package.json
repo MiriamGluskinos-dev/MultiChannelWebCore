@@ -1,5 +1,5 @@
 {
-  "name": "printoutStatementQuery",
+  "name": "MultiChannelCore",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,10 +12,12 @@
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "shared-core": "git+http://xtfs/DefaultCollection/general/_git/MultiChannelCore"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@igds/core-web": "file:./local-libs/@igds/core-web",
+    "@igds/react": "file:./local-libs/@igds/react",
+    "@igds/tokens": "file:./local-libs/@igds/tokens",
     "@rollup/rollup-win32-x64-msvc": "^4.34.9",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
@@ -27,6 +29,8 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "sass": "^1.83.0",
+    "sass-embedded": "^1.97.1",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
@@ -37,6 +41,20 @@
     "color-convert": "2.0.0",
     "cliui": "8.0.1",
     "escalade": "3.1.2",
-    "lru-cache": "5.1.1"
+    "lru-cache": "5.1.1",
+    "tslib": "2.8.1",
+    "@csstools/css-parser-algorithms": "3.0.5",
+    "cosmiconfig": "8.0.0",
+    "file-entry-cache": "8.0.0",
+    "globby": "11.0.4",
+    "ignore": "7.0.3",
+    "css-tree": "1.1.3",
+    "strip-ansi": "6.0.1",
+    "mdn-data": "2.0.30",
+    "ini": "5.0.0",
+    "slice-ansi": "5.0.0",
+    "ansi-styles": "5.0.0",
+    "which": "2.0.1",
+    "is-fullwidth-code-point": "3.0.0"
   }
 }

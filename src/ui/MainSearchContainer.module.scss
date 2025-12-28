@@ -1,0 +1,23 @@
+@use '../assets/styles.module.scss';
+
+body {
+    background-image: url('../images/BG.png');
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+
+    .submitButton {
+        font-family: Rubik;
+        padding: var(--space-400, 12px) var(--space-550, 20px);
+        border-radius: var(--radius-m, 8px);
+        border: 1px #0068F5 solid;
+        width: 200px;
+        background: #0068F5;
+        color: white;
+        margin-bottom: 25px;
+    }
+}
