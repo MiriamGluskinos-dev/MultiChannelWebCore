@@ -1,2 +1,2 @@
 export * from './Button';
-export * from './MainSearchContainer';
+export { default as MainSearchContainer } from './MainSearchContainer';
