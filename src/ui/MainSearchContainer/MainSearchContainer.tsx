@@ -1,6 +1,9 @@
 import { type FC, type ReactNode } from 'react'
-// import { Button } from 'shared-core';
-import { Button, Banner, FileUploader , Checkbox} from '@igds/react';
+import { Banner } from '@igds/react';
+import Title from '../common/title/Title';
+import SearchButtonsContainer from './SearchButtonsContainer/SearchButtonsContainer';
+import SearchContainer from './SearchContainer/SearchContainer';
+import './MainSearchContainer.scss';
 
 interface MainSearchContainerProps {
   children: ReactNode;
@@ -16,13 +19,11 @@ const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchCont
   return (
     <div className='mainSearchContainer'>
       <Banner title={infoText}></Banner>
-      <h1>{pageTitle}</h1>
-      {props.children}
-      {hasSearchButton && <Button variant="primary" size="medium" label='Search' >Search</Button>}
-      {hasClearButton && <Button label='Clear'>Clear</Button>}
-            <FileUploader id='klkl' onChange={()=>{}}></FileUploader>
-            <Checkbox label='checkbox 1' onChange={()=>{}}></Checkbox>
-
+      <Title title={pageTitle} subTitle='' />
+      <SearchContainer>
+        {props.children}
+      </SearchContainer>
+      <SearchButtonsContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} />
     </div>
   )
 }

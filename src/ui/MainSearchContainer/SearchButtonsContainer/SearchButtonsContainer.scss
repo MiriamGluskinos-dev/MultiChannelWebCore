@@ -1,0 +1,8 @@
+@use '../../../assets/styles.module.scss';
+
+
+.searchButtonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
