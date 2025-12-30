@@ -1,7 +1,6 @@
 import { type FC, type ReactNode } from 'react'
 import { Banner } from '@igds/react';
 import Title from '../common/title/Title';
-import SearchButtonsContainer from './SearchButtonsContainer/SearchButtonsContainer';
 import SearchContainer from './SearchContainer/SearchContainer';
 import './MainSearchContainer.modules.scss';
 
@@ -15,15 +14,13 @@ interface MainSearchContainerProps {
 
 const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchContainerProps) => {
   const { infoText, pageTitle, hasSearchButton, hasClearButton } = props;
-
   return (
     <div className='mainSearchContainer'>
-      <Banner title={infoText}></Banner>
+      <Banner description={infoText}></Banner>
       <Title title={pageTitle} subTitle='' />
-      <SearchContainer>
+      <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton}>
         {props.children}
       </SearchContainer>
-      <SearchButtonsContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} />
     </div>
   )
 }

@@ -1,10 +1,23 @@
-import { type FC, type PropsWithChildren } from 'react'
+import { type FC, type ReactNode } from 'react'
 import './SearchContainer.modules.scss';
+import SearchButtonsContainer from '../SearchButtonsContainer/SearchButtonsContainer';
 
-const SearchButtons: FC<PropsWithChildren> = (props) => {
+interface SearchContainerProps {
+  children: ReactNode;
+  hasSearchButton?: boolean;
+  hasClearButton?: boolean;
+}
+
+
+const SearchButtons: FC<SearchContainerProps> = (props: SearchContainerProps) => {
+  const { hasSearchButton, hasClearButton } = props;
+
   return (
     <div className='searchContainer'>
-      {props.children}
+      <div className='searchContent'>
+        {props.children}
+      </div>
+      <SearchButtonsContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} />
     </div>
   )
 }

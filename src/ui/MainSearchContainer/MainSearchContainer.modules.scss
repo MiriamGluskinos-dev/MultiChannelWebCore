@@ -5,14 +5,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
-    .searchContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+    margin: 7px;
+    width: 60%;
+    height: 80%;
+    
     .resultsContainer {
         display: flex;
         flex-direction: row;

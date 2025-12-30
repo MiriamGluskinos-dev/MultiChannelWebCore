@@ -1,5 +1,5 @@
 import { type FC } from 'react'
-import { Button } from '@igds/react';
+import { Button, Icon } from '@igds/react';
 import './SearchButtonsContainer.modules.scss';
 
 interface SearchButtonsContainerProps {
@@ -12,8 +12,8 @@ const SearchButtonsContainer: FC<SearchButtonsContainerProps> = (props: SearchBu
 
   return (
     <div className='searchButtonsContainer'>
-      {hasSearchButton && <Button label='Search' >Search</Button>}
-      {hasClearButton && <Button label='Clear'>Clear</Button>}
+      {hasSearchButton && <Button label='Search' icon={<Icon name="search" />}>חיפוש</Button>}
+      {hasClearButton && <Button label='Clear' icon={<Icon name="close" />}>נקה</Button>}
     </div>
   )
 }
