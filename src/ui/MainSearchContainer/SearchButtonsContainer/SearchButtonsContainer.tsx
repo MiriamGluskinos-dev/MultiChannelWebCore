@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import { Button } from '@igds/react';
-import './SearchButtonsContainer.scss';
+import './SearchButtonsContainer.modules.scss';
 
 interface SearchButtonsContainerProps {
   hasSearchButton?: boolean;
@@ -12,7 +12,7 @@ const SearchButtonsContainer: FC<SearchButtonsContainerProps> = (props: SearchBu
 
   return (
     <div className='searchButtonsContainer'>
-      {hasSearchButton && <Button variant="primary" size="medium" label='Search' >Search</Button>}
+      {hasSearchButton && <Button label='Search' >Search</Button>}
       {hasClearButton && <Button label='Clear'>Clear</Button>}
     </div>
   )

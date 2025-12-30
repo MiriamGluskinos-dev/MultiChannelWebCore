@@ -3,7 +3,7 @@ import { Banner } from '@igds/react';
 import Title from '../common/title/Title';
 import SearchButtonsContainer from './SearchButtonsContainer/SearchButtonsContainer';
 import SearchContainer from './SearchContainer/SearchContainer';
-import './MainSearchContainer.scss';
+import './MainSearchContainer.modules.scss';
 
 interface MainSearchContainerProps {
   children: ReactNode;

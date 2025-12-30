@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren } from 'react'
-import './SearchContainer.scss';
+import './SearchContainer.modules.scss';
 
 const SearchButtons: FC<PropsWithChildren> = (props) => {
   return (
