@@ -14,9 +14,6 @@ export default defineConfig({
   resolve: {
     alias: {
       // 'lru-cache': '/src/polyfills/lru-cache.js',
-      '@igds/react': '/local-libs/@igds/react',
-      '@igds/core-web': '/local-libs/@igds/core-web',
-      '@igds/tokens': '/local-libs/@igds/tokens',
       '@shared': path.resolve(__dirname, './src'),
     },
   },
