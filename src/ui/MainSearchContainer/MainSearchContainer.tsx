@@ -10,15 +10,18 @@ interface MainSearchContainerProps {
   pageTitle: string;
   hasSearchButton?: boolean;
   hasClearButton?: boolean;
+  onSearch?: () => void;
+  onClear?: () => void; 
 }
 
 const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchContainerProps) => {
-  const { infoText, pageTitle, hasSearchButton, hasClearButton } = props;
+  const { infoText, pageTitle, hasSearchButton, hasClearButton, onSearch, onClear } = props;
+
   return (
     <div className='mainSearchContainer'>
       <Banner description={infoText}></Banner>
       <Title title={pageTitle} subTitle='' />
-      <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton}>
+      <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}>
         {props.children}
       </SearchContainer>
     </div>

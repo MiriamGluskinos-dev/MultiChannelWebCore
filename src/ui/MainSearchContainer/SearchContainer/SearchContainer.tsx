@@ -6,18 +6,20 @@ interface SearchContainerProps {
   children: ReactNode;
   hasSearchButton?: boolean;
   hasClearButton?: boolean;
+  onSearch?: () => void;
+  onClear?: () => void; 
 }
 
 
 const SearchButtons: FC<SearchContainerProps> = (props: SearchContainerProps) => {
-  const { hasSearchButton, hasClearButton } = props;
+  const { hasSearchButton, hasClearButton, onSearch, onClear } = props;
 
   return (
     <div className='searchContainer'>
       <div className='searchContent'>
         {props.children}
       </div>
-      <SearchButtonsContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} />
+      <SearchButtonsContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}/>
     </div>
   )
 }

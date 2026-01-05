@@ -5,15 +5,17 @@ import './SearchButtonsContainer.modules.scss';
 interface SearchButtonsContainerProps {
   hasSearchButton?: boolean;
   hasClearButton?: boolean;
+  onSearch?: () => void;
+  onClear?: () => void; 
 }
 
 const SearchButtonsContainer: FC<SearchButtonsContainerProps> = (props: SearchButtonsContainerProps) => {
-  const { hasSearchButton, hasClearButton } = props;
+  const { hasSearchButton, hasClearButton, onSearch, onClear } = props;
 
   return (
     <div className='searchButtonsContainer'>
-      {hasSearchButton && <Button label='Search' icon={<Icon name="search" />}>חיפוש</Button>}
-      {hasClearButton && <Button label='Clear' icon={<Icon name="close" />}>נקה</Button>}
+      {hasSearchButton && <Button label='Search' icon={<Icon name="search" />} onClick={onSearch}></Button>}
+      {hasClearButton && <Button label='Clear' icon={<Icon name="close" />} onClick={onClear}>נקה</Button>}
     </div>
   )
 }
