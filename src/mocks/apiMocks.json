@@ -1,0 +1,32 @@
+{
+    "queries": {
+        "printoutStatementQuery": {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@example.com",
+            "status": "active"
+        },
+        "getProducts": [
+            {
+                "id": 1,
+                "name": "Product A",
+                "price": 29.99,
+                "inStock": true
+            },
+            {
+                "id": 2,
+                "name": "Product B",
+                "price": 49.99,
+                "inStock": false
+            }
+        ],
+        "getOrders": [
+            {
+                "orderId": 101,
+                "userId": 1,
+                "total": 79.98,
+                "date": "2024-01-15"
+            }
+        ]
+    }
+}

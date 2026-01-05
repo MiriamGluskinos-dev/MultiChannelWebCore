@@ -1,1 +1,2 @@
-export const apiURL ='https://api.example.com';
+export { default as useApiRequest } from './useApiRequest';
+export { default as mockApiRequest } from './mockApiRequest'
