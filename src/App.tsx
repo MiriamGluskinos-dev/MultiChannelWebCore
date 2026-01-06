@@ -1,7 +1,10 @@
+import type { FC } from 'react';
+import './i18n/config';
 import MainSearchContainer from './ui/MainSearchContainer/MainSearchContainer';
 import './App.css';
 
-function App() {
+
+const App: FC = () => {
 
   return (
     <div className="App">
@@ -9,7 +12,7 @@ function App() {
       <MainSearchContainer
         pageTitle=':שאילתת הודעות בוקר'
         infoText="הסבר לשאילתה"
-        hasSearchButton 
+        hasSearchButton
         hasClearButton
       >
         <div>I'm the content</div>
