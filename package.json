@@ -16,8 +16,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@igds/core-web": "git+http://xtfs/DefaultCollection/general/_git/igds-core-web#main",
-    "@igds/react": "git+http://xtfs/DefaultCollection/general/_git/igds-react#main",
+    "@igds/core-web": "^0.1.8",
+    "@igds/react": "^0.1.7",
     "@rollup/rollup-win32-x64-msvc": "^4.34.9",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
