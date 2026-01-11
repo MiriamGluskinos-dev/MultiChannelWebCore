@@ -19,8 +19,8 @@ const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchCont
 
   return (
     <div className='mainSearchContainer'>
-      <Toast className='mainSearchToast'>{infoText}</Toast>
       <Title title={pageTitle} subTitle='' />
+      <Toast className='mainSearchToast'>{infoText}</Toast>
       <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}>
         {props.children}
       </SearchContainer>
