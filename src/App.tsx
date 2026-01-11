@@ -1,18 +1,20 @@
+import { useEffect } from 'react';
 import type { FC } from 'react';
 import './i18n/config';
 import MainSearchContainer from './ui/MainSearchContainer/MainSearchContainer';
 import './App.css';
 import { useApiRequest } from './api';
 
-
 const App: FC = () => {
 
-  const res= useApiRequest({
+  const res = useApiRequest({
     url: '/messages/morning',
     method: 'GET',
   });
 
-  console.log('PAGE: API response:', res);
+  useEffect(() => {
+    console.log('PAGE: API response:', res);
+  }, [res]);
 
   return (
     <div className="App">

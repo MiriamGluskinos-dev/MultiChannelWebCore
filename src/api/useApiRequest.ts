@@ -26,7 +26,7 @@ const useApiRequest = <T,>(props: ApiRequest): ApiResponse => {
 
   // Read env via Vite's client-side API `import.meta.env` (no `process` in browser).
   const env = (import.meta as any).env as Record<string, any>;
-  const useMock = env.VITE_USE_MOCK === 'true';
+  const useMock = true || env.VITE_USE_MOCK === 'true';
 
   // if mock status is true, return mock response from mockApiRequest
   const requestFn = useMock
