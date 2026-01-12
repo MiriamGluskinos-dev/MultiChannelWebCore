@@ -1,40 +1,11 @@
 @use '../../assets/styles.module.scss';
 
 
-body {
-    background-image: url('../../images/BG.png');
-    padding: 0;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f1f7ff;
-}
-
-
-#root {
-    height: 100%;
-}
-
-.App {
-    text-align: center;
-    width: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
 .mainSearchContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 7px;
-    width: 60%;
-    height: 80%;
+    width: 100%;
 
     .mainSearchToast {
         width: 100%;
