@@ -1,5 +1,5 @@
 import { type FC, type ReactNode } from 'react'
-import './RootLayout.scss';
+import './RootLayout.modules.scss';
 
 interface RootLayoutProps {
     children: ReactNode;
