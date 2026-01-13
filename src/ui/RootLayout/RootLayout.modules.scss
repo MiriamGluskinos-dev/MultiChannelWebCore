@@ -1,6 +1,11 @@
 @use '../../assets/styles.module.scss';
 
 
+html, body, #root {
+    height: 100%;
+    font-family: Rubik, sans-serif;
+}
+
 body {
     background-image: url('../../images/BG.png');
     padding: 0;
@@ -8,15 +13,11 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
     background-position: left top;
-    height: 100%;
-    margin: 0;
     background-color: #f1f7ff;
 }
 
 
 #root {
-    height: 100%;
-    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 16rem;
