@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import type { FC } from 'react';
 import './i18n/config';
 import MainSearchContainer from './ui/MainSearchContainer/MainSearchContainer';
-import './App.css';
 import { useApiRequest } from './api';
+import { RootLayout } from './ui';
+import './App.css';
 
 const App: FC = () => {
 
@@ -17,7 +18,7 @@ const App: FC = () => {
   }, [res]);
 
   return (
-    <div className="App">
+    <RootLayout>
       <h3>Shared Core Playground</h3>
       <MainSearchContainer
         pageTitle=':שאילתת הודעות בוקר'
@@ -27,7 +28,7 @@ const App: FC = () => {
       >
         <div>I'm the content</div>
       </MainSearchContainer>
-    </div>
+    </RootLayout>
   );
 }
 

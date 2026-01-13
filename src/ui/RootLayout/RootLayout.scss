@@ -1,0 +1,42 @@
+@use '../../assets/styles.module.scss';
+
+
+body {
+    background-image: url('../../images/BG.png');
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left top;
+    height: 100%;
+    margin: 0;
+    background-color: #f1f7ff;
+}
+
+
+#root {
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 16rem;
+    text-align: center;
+}
+
+
+.App {
+  text-align: center;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.root-layout {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
