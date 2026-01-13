@@ -1,6 +1,10 @@
 @use '../../assets/styles.module.scss';
 
 
+html {
+    background-color: #f1f7ff;
+}
+
 html, body, #root {
     height: 100%;
     font-family: Rubik, sans-serif;
@@ -11,9 +15,8 @@ body {
     padding: 0;
     margin: 0;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     background-position: left top;
-    background-color: #f1f7ff;
 }
 
 
