@@ -1,6 +1,7 @@
-import { type FC, type ReactNode } from 'react'
+import { type FC, type ReactNode, useState } from 'react'
 import { Toast } from '@igds/react';
 import Title from '../common/title/Title';
+import Link from '../common/link/link';
 import SearchContainer from './SearchContainer/SearchContainer';
 import './MainSearchContainer.modules.scss';
 
@@ -16,11 +17,15 @@ interface MainSearchContainerProps {
 
 const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchContainerProps) => {
   const { infoText, pageTitle, hasSearchButton, hasClearButton, onSearch, onClear } = props;
+  const [showInfo, setShowInfo] = useState(false);
 
   return (
     <div className='mainSearchContainer'>
       <Title title={pageTitle} subTitle='' />
-      <Toast className='mainSearchToast'>{infoText}</Toast>
+      <div className='mainSearchInfoLink'>
+        <Link onClick={() => setShowInfo(!showInfo)} text='הסבר לשאילתה' />
+        {showInfo && <Toast className='mainSearchToast'>{infoText}</Toast>}
+      </div>
       <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}>
         {props.children}
       </SearchContainer>
