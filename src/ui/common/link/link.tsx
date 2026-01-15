@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import "./link.modules.scss";
+import "./link.module.scss";
 
 interface LinkProps {
     text: string;

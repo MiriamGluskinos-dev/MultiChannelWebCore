@@ -1,7 +1,7 @@
 import { type FC } from 'react'
 import { Button, Icon } from '@igds/react';
 import { useTranslation } from 'react-i18next';
-import './SearchButtonsContainer.modules.scss';
+import './SearchButtonsContainer.module.scss';
 
 interface SearchButtonsContainerProps {
   hasSearchButton?: boolean;

@@ -1,5 +1,5 @@
 import { type FC, type ReactNode } from 'react'
-import './SearchContainer.modules.scss';
+import './SearchContainer.module.scss';
 import SearchButtonsContainer from '../SearchButtonsContainer/SearchButtonsContainer';
 
 interface SearchContainerProps {

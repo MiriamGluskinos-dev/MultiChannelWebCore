@@ -3,7 +3,8 @@ import { Toast } from '@igds/react';
 import Title from '../common/title/Title';
 import Link from '../common/link/link';
 import SearchContainer from './SearchContainer/SearchContainer';
-import './MainSearchContainer.modules.scss';
+import { useTranslation } from 'react-i18next';
+import './MainSearchContainer.module.scss';
 
 interface MainSearchContainerProps {
   children: ReactNode;
@@ -18,12 +19,13 @@ interface MainSearchContainerProps {
 const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchContainerProps) => {
   const { infoText, pageTitle, hasSearchButton, hasClearButton, onSearch, onClear } = props;
   const [showInfo, setShowInfo] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className='mainSearchContainer'>
       <Title title={pageTitle} subTitle='' />
       <div className='mainSearchInfoLink'>
-        <Link onClick={() => setShowInfo(!showInfo)} text='הסבר לשאילתה' />
+        <Link onClick={() => setShowInfo(!showInfo)} text={t('queryExplanation')} />
         {showInfo && <Toast className='mainSearchToast'>{infoText}</Toast>}
       </div>
       <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}>
