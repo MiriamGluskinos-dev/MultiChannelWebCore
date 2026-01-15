@@ -10,9 +10,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build-lib": "tsc -p tsconfig.lib.json",
-    "build-playground": "vite build",
-    "build": "npm run build-lib && npm run build-playground",
+    "build": "vite build && tsc -p tsconfig.lib.json --emitDeclarationOnly",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -43,8 +41,7 @@
     "sass": "^1.83.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4",
-    "vite-plugin-css-injected-by-js": "^3.5.2"
+    "vite": "^7.2.4"
   },
   "overrides": {
     "@babel/code-frame": "7.26.2",
