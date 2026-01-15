@@ -1,1 +1,0 @@
-{"version":3,"file":"RootLayout.d.ts","sourceRoot":"","sources":["../../../src/ui/RootLayout/RootLayout.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,EAAE,EAAE,KAAK,SAAS,EAAE,MAAM,OAAO,CAAA;AAC/C,OAAO,mBAAmB,CAAC;AAE3B,UAAU,eAAe;IACrB,QAAQ,EAAE,SAAS,CAAC;CACvB;AAED,QAAA,MAAM,UAAU,EAAE,EAAE,CAAC,eAAe,CAMnC,CAAA;AAED,eAAe,UAAU,CAAC"}

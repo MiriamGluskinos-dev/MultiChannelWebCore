@@ -47,7 +47,7 @@ export default defineConfig({
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') {
-            return 'multi-channel-core.css'; // 💡 שם הקובץ הרצוי
+            return 'multi-channel-core.css';
           }
           return assetInfo.name;
         },

@@ -1,6 +1,6 @@
 {
   "name": "multi-channel-core",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "license": "MIT",
   "main": "dist/multi-channel-core.umd.js",
@@ -31,13 +31,12 @@
     "react-dom": "^19.0.0",
     "react-i18next": "^14.0.0",
     "i18next": "^23.0.0",
-    "@igds/core-web": "^0.1.8",
-    "@igds/react": "^0.1.7"
+    "@igds/core-web": "0.1.28",
+    "@igds/react": "0.1.28"
   },
+
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@igds/core-web": "^0.1.8",
-    "@igds/react": "^0.1.7",
     "@rollup/rollup-win32-x64-msvc": "^4.34.9",
     "@types/node": "^24.10.7",
     "@types/react": "^19.2.5",
