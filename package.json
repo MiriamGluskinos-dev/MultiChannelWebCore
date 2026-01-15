@@ -2,9 +2,18 @@
   "name": "multi-channel-core",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
-  "main": "dist/index.js",
+  "license": "MIT",
+  "main": "dist/multi-channel-core.umd.js",
+  "module": "dist/multi-channel-core.es.js",
   "types": "dist/index.d.ts",
+  "style": "dist/multi-channel-core.css",
+  "exports": {
+    ".": {
+      "import": "./dist/multi-channel-core.es.js",
+      "require": "./dist/multi-channel-core.umd.js"
+    },
+    "./style": "./dist/multi-channel-core.css"
+  },
   "files": [
     "dist"
   ],
@@ -18,10 +27,10 @@
     "axios": "^1.10.0"
   },
   "peerDependencies": {
-    "i18next": "^23.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-i18next": "^14.0.0"
+    "react-i18next": "^14.0.0",
+    "i18next": "^23.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
