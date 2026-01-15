@@ -34,11 +34,22 @@ export default defineConfig({
     },
     cssCodeSplit: true,
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: [
+        'react',
+        'react-dom',
+        '@igds/core-web',
+        '@igds/react'
+      ],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+        },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') {
+            return 'multi-channel-core.css'; // 💡 שם הקובץ הרצוי
+          }
+          return assetInfo.name;
         },
       },
     },
