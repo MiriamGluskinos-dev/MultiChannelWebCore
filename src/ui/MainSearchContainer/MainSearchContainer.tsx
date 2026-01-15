@@ -8,8 +8,8 @@ import './MainSearchContainer.module.scss';
 
 interface MainSearchContainerProps {
   children: ReactNode;
-  infoText: string;
   pageTitle: string;
+  infoText?: string;
   hasSearchButton?: boolean;
   hasClearButton?: boolean;
   onSearch?: () => void;
@@ -24,13 +24,13 @@ const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchCont
   return (
     <div className='mainSearchContainer'>
       <Title title={pageTitle} subTitle='' />
-      <div className='mainSearchInfoLink'>
+      {infoText && <div className='mainSearchInfoLink'>
         <Link onClick={() => setShowInfo(!showInfo)} text={t('queryExplanation')} />
         {showInfo && <Toast className='mainSearchToast'>{infoText}</Toast>}
-      </div>
-      <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}>
+      </div>}
+      {props.children && <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}>
         {props.children}
-      </SearchContainer>
+      </SearchContainer>}
     </div>
   )
 }
