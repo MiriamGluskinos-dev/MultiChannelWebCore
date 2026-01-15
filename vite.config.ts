@@ -1,9 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import path from 'path';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react({
@@ -11,17 +9,14 @@ export default defineConfig({
         plugins: [['babel-plugin-react-compiler']],
       },
     }),
-    cssInjectedByJsPlugin(),
   ],
   resolve: {
     alias: {
-      // 'lru-cache': '/src/polyfills/lru-cache.js',
       '@shared': path.resolve(__dirname, './src'),
     },
   },
   css: {
     modules: {
-      // שמות מחולקים עבור CSS/SCSS Modules
       generateScopedName: '[name]__[local]___[hash:base64:5]',
     },
     preprocessorOptions: {
@@ -37,15 +32,15 @@ export default defineConfig({
       name: 'MultiChannelCore',
       fileName: (format) => `multi-channel-core.${format}.js`,
     },
+    cssCodeSplit: true,
     rollupOptions: {
-      external: ['react', 'react-dom'], // לא לכלול את React bundle
+      external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
         },
       },
-    }
-  }
-})
-
+    },
+  },
+});
