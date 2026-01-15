@@ -1,9 +1,13 @@
 @use '../../assets/styles.module.scss';
 
-
 html {
-    background-color: #f1f7ff;
+  background-color: #f1f7ff;
+  // direction: ltr;
 }
+
+// * {
+//   direction: ltr;
+// }
 
 html, body, #root {
     height: 100%;
@@ -23,7 +27,7 @@ body {
 #root {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 16rem;
+    padding: 0 20%;
     text-align: center;
 }
 
