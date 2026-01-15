@@ -1,5 +1,4 @@
 import { type FC } from 'react';
-import './SearchButtonsContainer.module.scss';
 interface SearchButtonsContainerProps {
     hasSearchButton?: boolean;
     hasClearButton?: boolean;

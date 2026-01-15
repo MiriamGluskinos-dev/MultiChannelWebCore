@@ -1,9 +1,8 @@
 import { type FC, type ReactNode } from 'react';
-import './MainSearchContainer.module.scss';
 interface MainSearchContainerProps {
     children: ReactNode;
-    infoText: string;
     pageTitle: string;
+    infoText?: string;
     hasSearchButton?: boolean;
     hasClearButton?: boolean;
     onSearch?: () => void;

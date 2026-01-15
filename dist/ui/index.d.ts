@@ -3,5 +3,4 @@ export * from './common/fieldsGrid/fieldsGrid';
 export * from './common/link/link';
 export { default as MainSearchContainer } from './MainSearchContainer/MainSearchContainer';
 export { default as RootLayout } from './RootLayout/RootLayout';
-export { default as rootLayoutStyles } from './RootLayout/RootLayout.module.scss';
 //# sourceMappingURL=index.d.ts.map

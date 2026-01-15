@@ -1,5 +1,4 @@
 import { type FC, type ReactNode } from 'react';
-import './SearchContainer.module.scss';
 interface SearchContainerProps {
     children: ReactNode;
     hasSearchButton?: boolean;

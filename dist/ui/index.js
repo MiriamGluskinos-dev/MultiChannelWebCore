@@ -5,4 +5,3 @@ export * from './common/link/link';
 //components
 export { default as MainSearchContainer } from './MainSearchContainer/MainSearchContainer';
 export { default as RootLayout } from './RootLayout/RootLayout';
-export { default as rootLayoutStyles } from './RootLayout/RootLayout.module.scss';

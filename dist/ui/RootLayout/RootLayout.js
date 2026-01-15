@@ -1,6 +1,6 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import './RootLayout.module.scss';
+import './RootLayout.scss';
 const RootLayout = (props) => {
-    return (_jsx("div", { className: 'root-layout', children: props.children }));
+    return (_jsx("div", { className: 'rootLayout', children: props.children }));
 };
 export default RootLayout;

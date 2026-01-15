@@ -1,5 +1,4 @@
 import { type FC } from "react";
-import "./link.module.scss";
 interface LinkProps {
     text: string;
     onClick?: () => void;
