@@ -4,7 +4,7 @@ import Title from '../common/title/Title';
 import Link from '../common/link/link';
 import SearchContainer from './SearchContainer/SearchContainer';
 import { useTranslation } from 'react-i18next';
-import './MainSearchContainer.module.scss';
+import styles from './MainSearchContainer.module.scss';
 
 interface MainSearchContainerProps {
   children: ReactNode;
@@ -22,11 +22,11 @@ const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchCont
   const { t } = useTranslation();
 
   return (
-    <div className='mainSearchContainer'>
+    <div className={styles.mainSearchContainer}>
       <Title title={pageTitle} subTitle='' />
-      {infoText && <div className='mainSearchInfoLink'>
+      {infoText && <div className={styles.mainSearchInfoLink}>
         <Link onClick={() => setShowInfo(!showInfo)} text={t('queryExplanation')} />
-        {showInfo && <Toast className='mainSearchToast'>{infoText}</Toast>}
+        {showInfo && <Toast className={styles.mainSearchToast}>{infoText}</Toast>}
       </div>}
       {props.children && <SearchContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}>
         {props.children}

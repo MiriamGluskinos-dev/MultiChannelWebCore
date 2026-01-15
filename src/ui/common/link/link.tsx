@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import "./link.module.scss";
+import styles from "./link.module.scss";
 
 interface LinkProps {
     text: string;
@@ -7,7 +7,7 @@ interface LinkProps {
 }
 
 const Link: FC<LinkProps> = ({ text, onClick }) => {
-    return <h2 className="link" onClick={onClick}>{text}</h2>
+    return <h2 className={styles.link} onClick={onClick}>{text}</h2>
 }
 
 export default Link;

@@ -1,5 +1,5 @@
 import { type FC, type ReactNode } from 'react'
-import './SearchContainer.module.scss';
+import styles from './SearchContainer.module.scss';
 import SearchButtonsContainer from '../SearchButtonsContainer/SearchButtonsContainer';
 
 interface SearchContainerProps {
@@ -15,8 +15,8 @@ const SearchButtons: FC<SearchContainerProps> = (props: SearchContainerProps) =>
   const { hasSearchButton, hasClearButton, onSearch, onClear } = props;
 
   return (
-    <div className='searchContainer'>
-      <div className='searchContent'>
+    <div className={styles.searchContainer}>
+      <div className={styles.searchContent}>
         {props.children}
       </div>
       <SearchButtonsContainer hasSearchButton={hasSearchButton} hasClearButton={hasClearButton} onSearch={onSearch} onClear={onClear}/>

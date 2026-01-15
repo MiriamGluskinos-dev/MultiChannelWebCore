@@ -1,5 +1,5 @@
 import { type FC, type ReactNode } from 'react'
-import './RootLayout.module.scss';
+import './RootLayout.scss';
 
 interface RootLayoutProps {
     children: ReactNode;
@@ -7,7 +7,7 @@ interface RootLayoutProps {
 
 const RootLayout: FC<RootLayoutProps> = (props: RootLayoutProps) => {
     return (
-        <div className='root-layout'>
+        <div className='rootLayout'>
             {props.children}
         </div>
     )
