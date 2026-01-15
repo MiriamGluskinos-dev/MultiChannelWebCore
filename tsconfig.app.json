@@ -32,6 +32,7 @@
   "include": [
     "src",
     "playground",
-    "src/App.tsx"
+    "src/App.tsx",
+    "src/styles.d.ts"
   ]
 }
