@@ -37,6 +37,9 @@ export default defineConfig({
       external: [
         'react',
         'react-dom',
+        'react/jsx-runtime',
+        'react/compiler-runtime',
+        'react-i18next',
         '@igds/core-web',
         '@igds/react'
       ],
