@@ -15,7 +15,8 @@
     "./style": "./dist/multi-channel-core.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "dev": "vite",
