@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import type { FC } from 'react';
-import './i18n/config';
-import MainSearchContainer from './ui/MainSearchContainer/MainSearchContainer';
-import { useApiRequest } from './api';
-import { RootLayout } from './ui';
+import '../../src/i18n/config';
+import MainSearchContainer from '../../src/ui/MainSearchContainer/MainSearchContainer';
+import { useApiRequest } from '../../src/api';
+import { RootLayout } from '../../src/ui';
 import './App.css';
 
 const App: FC = () => {

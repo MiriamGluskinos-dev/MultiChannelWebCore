@@ -54,7 +54,7 @@ const useApiRequest = <T,>(props: ApiRequest): ApiResponse => {
       }
     };
 
-    fetchData();
+    url && method && data && fetchData();
   }, [url, method, data]);
 
   return {
