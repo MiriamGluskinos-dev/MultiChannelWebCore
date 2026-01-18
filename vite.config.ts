@@ -32,7 +32,7 @@ export default defineConfig({
       name: 'MultiChannelCore',
       fileName: (format) => `multi-channel-core.${format}.js`,
     },
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     rollupOptions: {
       external: [
         'react',
