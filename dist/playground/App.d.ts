@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import './i18n/config';
+import '../../src/i18n/config';
 import './App.css';
 declare const App: FC;
 export default App;
