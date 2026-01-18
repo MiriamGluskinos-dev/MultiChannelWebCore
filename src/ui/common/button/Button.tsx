@@ -4,7 +4,8 @@ interface ButtonProps {
   children: React.ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({ children }) => {
+
+const Button: React.FC<ButtonProps> = ({ children }) => {
   return (
     <button
       style={{
@@ -19,3 +20,5 @@ export const Button: React.FC<ButtonProps> = ({ children }) => {
     </button>
   );
 };
+
+export default Button;
