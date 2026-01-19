@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './MainSearchContainer.module.scss';
 
 interface MainSearchContainerProps {
-  children: ReactNode;
+  children?: ReactNode;
   pageTitle: string;
   infoText?: string;
   hasSearchButton?: boolean;
