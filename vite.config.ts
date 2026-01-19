@@ -6,7 +6,9 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: [['babel-plugin-react-compiler']],
+        plugins: process.env.NODE_ENV === 'development'
+      ? [['babel-plugin-react-compiler']]
+      : [],
       },
     }),
   ],
@@ -38,7 +40,6 @@ export default defineConfig({
         'react',
         'react-dom',
         'react/jsx-runtime',
-        'react/compiler-runtime',
         'react-i18next',
         '@igds/core-web',
         '@igds/react'
