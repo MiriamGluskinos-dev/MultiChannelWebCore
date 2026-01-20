@@ -24,8 +24,6 @@ const App: FC = () => {
         pageTitle='שאילתת הודעות בוקר:'
         infoText="הסבר לשאילתה"
         buttonsProps={{
-          hasSearchButton: true,
-          hasClearButton: true,
           isClearDisabled: false,
           isSearchDisabled: true,
         }}

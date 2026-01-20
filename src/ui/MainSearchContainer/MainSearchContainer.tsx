@@ -27,7 +27,7 @@ const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchCont
         {showInfo && <Toast className={styles.mainSearchToast}>{infoText}</Toast>}
       </div>}
       {props.children &&
-        <SearchContainer buttonsProps={buttonsProps}        >
+        <SearchContainer buttonsProps={buttonsProps}>
           {props.children}
         </SearchContainer>}
     </div>
