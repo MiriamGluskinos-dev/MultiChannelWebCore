@@ -1,3 +1,4 @@
+export type ApiMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 export interface ApiResponse {
     response: {
         data?: any;
@@ -5,11 +6,13 @@ export interface ApiResponse {
         error?: string | null;
         status?: 'pending' | 'success' | 'error';
     };
+    refetch: () => Promise<void>;
 }
 export interface ApiRequest {
     url: string;
-    method: 'GET' | 'POST' | 'PUT' | 'DELETE';
+    method: ApiMethod;
     data?: any;
+    mock?: boolean;
 }
 declare const useApiRequest: <T>(props: ApiRequest) => ApiResponse;
 export default useApiRequest;
