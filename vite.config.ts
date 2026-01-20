@@ -42,7 +42,8 @@ export default defineConfig({
         'react/jsx-runtime',
         'react-i18next',
         '@igds/core-web',
-        '@igds/react'
+        '@igds/react',
+        '@igds/tokens'
       ],
       output: {
         globals: {

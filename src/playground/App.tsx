@@ -21,7 +21,7 @@ const App: FC = () => {
     <RootLayout>
       <h3>Shared Core Playground</h3>
       <MainSearchContainer
-        pageTitle=':שאילתת הודעות בוקר'
+        pageTitle='שאילתת הודעות בוקר:'
         infoText="הסבר לשאילתה"
         hasSearchButton
         hasClearButton

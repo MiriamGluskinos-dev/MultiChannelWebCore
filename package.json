@@ -29,6 +29,7 @@
   "peerDependencies": {
     "@igds/core-web": "0.1.28",
     "@igds/react": "0.1.28",
+    "@igds/tokens": "0.1.28",
     "i18next": "^23.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -38,6 +39,7 @@
     "@eslint/js": "^9.39.1",
     "@igds/core-web": "^0.1.28",
     "@igds/react": "^0.1.28",
+    "@igds/tokens": "^0.1.28",
     "@rollup/rollup-win32-x64-msvc": "^4.34.9",
     "@types/node": "^24.10.7",
     "@types/react": "^19.2.5",

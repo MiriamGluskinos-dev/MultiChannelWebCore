@@ -1,4 +1,5 @@
 import { type FC, type ReactNode } from 'react'
+import '@igds/tokens/lib/index.min.css';
 import './RootLayout.scss';
 
 interface RootLayoutProps {
@@ -6,8 +7,10 @@ interface RootLayoutProps {
 }
 
 const RootLayout: FC<RootLayoutProps> = (props: RootLayoutProps) => {
+    const lang: 'en' | 'he' = 'he';
+    
     return (
-        <div className='rootLayout'>
+        <div className='rootLayout' style={{direction: lang === 'he' ? 'rtl': 'ltr'}}>
             {props.children}
         </div>
     )
