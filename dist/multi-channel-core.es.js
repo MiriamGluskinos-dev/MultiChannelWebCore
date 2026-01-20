@@ -1875,7 +1875,7 @@ const nr = async (e, t, n) => new Promise((r) => {
     ] }),
     e.children && /* @__PURE__ */ E(mr, { hasSearchButton: r, hasClearButton: s, onSearch: i, onClear: o, children: e.children })
   ] });
-}, vr = (e) => /* @__PURE__ */ E("div", { className: "rootLayout", children: e.children });
+}, vr = (e) => /* @__PURE__ */ E("div", { className: "rootLayout", style: { direction: "rtl" }, children: e.children });
 export {
   zr as Button,
   Mr as FieldsGrid,
