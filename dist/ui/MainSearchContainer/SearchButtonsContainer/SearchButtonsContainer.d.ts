@@ -1,7 +1,9 @@
 import { type FC } from 'react';
-interface SearchButtonsContainerProps {
+export interface SearchButtonsContainerProps {
     hasSearchButton?: boolean;
     hasClearButton?: boolean;
+    isSearchDisabled?: boolean;
+    isClearDisabled?: boolean;
     onSearch?: () => void;
     onClear?: () => void;
 }

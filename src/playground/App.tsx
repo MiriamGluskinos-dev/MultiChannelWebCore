@@ -23,8 +23,12 @@ const App: FC = () => {
       <MainSearchContainer
         pageTitle='שאילתת הודעות בוקר:'
         infoText="הסבר לשאילתה"
-        hasSearchButton
-        hasClearButton
+        buttonsProps={{
+          hasSearchButton: true,
+          hasClearButton: true,
+          isClearDisabled: false,
+          isSearchDisabled: true,
+        }}
       >
         <div>I'm the content</div>
       </MainSearchContainer>

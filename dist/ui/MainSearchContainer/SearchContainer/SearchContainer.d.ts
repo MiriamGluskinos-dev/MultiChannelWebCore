@@ -1,10 +1,8 @@
 import { type FC, type ReactNode } from 'react';
+import { type SearchButtonsContainerProps } from '../SearchButtonsContainer/SearchButtonsContainer';
 interface SearchContainerProps {
     children: ReactNode;
-    hasSearchButton?: boolean;
-    hasClearButton?: boolean;
-    onSearch?: () => void;
-    onClear?: () => void;
+    buttonsProps?: SearchButtonsContainerProps;
 }
 declare const SearchButtons: FC<SearchContainerProps>;
 export default SearchButtons;
