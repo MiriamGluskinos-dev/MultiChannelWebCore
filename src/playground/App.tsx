@@ -1,34 +1,44 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import type { FC } from 'react';
 import '../../src/i18n/config';
-import MainSearchContainer from '../../src/ui/MainSearchContainer/MainSearchContainer';
 import { useApiRequest } from '../../src/api';
 import { RootLayout } from '../../src/ui';
-import './App.css';
 import useSystemTableApiRequest from '../api/useSystemTableApiRequest';
+import MainSearchContainer from '../../src/ui/MainSearchContainer/MainSearchContainer';
+import './App.css';
 
 const App: FC = () => {
+  const [click, setClick] = useState(false)
 
-  const res = useApiRequest({
-    url: 'mock/url',
-    method: 'GET',
-    mock: true
-  });
-
-  const resSystemTable = useSystemTableApiRequest({
+  const { response } = useSystemTableApiRequest({
     tableName: 'CargoIdentifierType',
   });
 
   useEffect(() => {
-    console.log('PAGE: API rpesponse:', res);
-  }, [res.response.data]);
+    if (response) {
+      console.log('PAGE: System Table data:', response.data);
+    }
+  }, [response.data]);
+
+  const { response: res, refetch } = useApiRequest({
+    url: '/shaarolami/CustomspilotWeb/SystemTables/api/GetTableData?tableName=CargoIdentifierType',
+    method: 'GET',
+    // mock: true,
+    auto: false
+  });
 
   useEffect(() => {
+    console.log('no data?', res.data);
+  }, [res.data]);
 
-    if (resSystemTable.response) {
-      console.log('PAGE: System Table data:', resSystemTable.response.data);
+  useEffect(() => {
+    if (click) {
+      console.log('refetching!!!!!!');
+      refetch();
     }
-  }, [resSystemTable.response.data]);
+  }, [click]);
+
+
 
   return (
     <RootLayout>
@@ -42,6 +52,7 @@ const App: FC = () => {
         }}
       >
         <div>I'm the content</div>
+        <button onClick={() => setClick(true)}>sss</button>
       </MainSearchContainer>
     </RootLayout>
   );

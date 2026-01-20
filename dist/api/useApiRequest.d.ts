@@ -13,6 +13,7 @@ export interface ApiRequest {
     method: ApiMethod;
     data?: any;
     mock?: boolean;
+    auto?: boolean;
 }
 declare const useApiRequest: <T>(props: ApiRequest) => ApiResponse;
 export default useApiRequest;

@@ -19,6 +19,7 @@ export interface ApiRequest {
   method: ApiMethod;
   data?: any;
   mock?: boolean;
+  auto?: boolean;
 }
 
 const useApiRequest = <T,>(props: ApiRequest): ApiResponse => {
@@ -26,7 +27,7 @@ const useApiRequest = <T,>(props: ApiRequest): ApiResponse => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const { url, method, data, mock } = props;
+  const { url, method, data, mock, auto= true} = props;
 
   const requestFn = mock
     ? (opts: ApiRequest) => mockApiRequest(opts.url, opts.method, opts.data)
@@ -52,8 +53,8 @@ const useApiRequest = <T,>(props: ApiRequest): ApiResponse => {
   };
 
   useEffect(() => {
-    fetchData();
-  }, [url, method, data]);
+    if (auto) fetchData();
+  }, [auto]);
 
   return {
     response: {
