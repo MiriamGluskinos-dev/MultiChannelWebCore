@@ -5,17 +5,30 @@ import MainSearchContainer from '../../src/ui/MainSearchContainer/MainSearchCont
 import { useApiRequest } from '../../src/api';
 import { RootLayout } from '../../src/ui';
 import './App.css';
+import useSystemTableApiRequest from '../api/useSystemTableApiRequest';
 
 const App: FC = () => {
 
   const res = useApiRequest({
-    url: '/messages/morning',
+    url: 'mock/url',
     method: 'GET',
+    mock: true
+  });
+
+  const resSystemTable = useSystemTableApiRequest({
+    tableName: 'CargoIdentifierType',
   });
 
   useEffect(() => {
-    console.log('PAGE: API response:', res);
-  }, [res]);
+    console.log('PAGE: API rpesponse:', res);
+  }, [res.response.data]);
+
+  useEffect(() => {
+
+    if (resSystemTable.response) {
+      console.log('PAGE: System Table data:', resSystemTable.response.data);
+    }
+  }, [resSystemTable.response.data]);
 
   return (
     <RootLayout>

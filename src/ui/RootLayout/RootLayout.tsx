@@ -14,7 +14,6 @@ const RootLayout: FC<RootLayoutProps> = (props: RootLayoutProps) => {
 
     useEffect(() => {
         const script = document.createElement("script");
-        console.log('env', env);
         
         script.src = env === "test" ?
             "https://test.newgov.gov.il/Govil.HeaderFooter.Api/govilHF/header-footer.js" :

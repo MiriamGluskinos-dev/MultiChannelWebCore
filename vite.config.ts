@@ -7,8 +7,8 @@ export default defineConfig({
     react({
       babel: {
         plugins: process.env.NODE_ENV === 'development'
-      ? [['babel-plugin-react-compiler']]
-      : [],
+          ? [['babel-plugin-react-compiler']]
+          : [],
       },
     }),
   ],
@@ -59,4 +59,14 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      "/shaarolami": {
+        target: "https://shaarolami-query.customs.mof.gov.il",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/shaarolami/, "")
+      },
+    }
+  }
 });
