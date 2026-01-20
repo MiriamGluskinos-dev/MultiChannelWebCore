@@ -40,7 +40,7 @@ const useApiRequest = <T,>(props: ApiRequest): ApiResponse => {
     try {
       console.log('API request:', url, method, data);
       const result = await requestFn({ url, method, data });
-      console.log('API response:', result.data);
+      console.log('API response: status', result.data? 'ok': 'error');
       setResponse(result.data);
       setError(null);
     } catch (err: any) {

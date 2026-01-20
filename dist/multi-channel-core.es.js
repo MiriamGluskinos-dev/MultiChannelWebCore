@@ -1797,7 +1797,7 @@ const rr = (e) => {
     try {
       console.log("API request:", c, d, f);
       const l = await b({ url: c, method: d, data: f });
-      console.log("API response:", l.data), n(l.data), s(null);
+      console.log("API response: status", l.data ? "ok" : "error"), n(l.data), s(null);
     } catch (l) {
       console.error("API request error:", l), s(l?.message ? l : null), n(null);
     } finally {
