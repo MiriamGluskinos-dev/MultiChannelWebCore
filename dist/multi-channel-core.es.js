@@ -1850,7 +1850,7 @@ const nr = async (e, t, n) => new Promise((r) => {
 }, dr = "SearchButtonsContainer-module__searchButtonsContainer___sSZIE", hr = {
   searchButtonsContainer: dr
 }, pr = (e) => {
-  const { hasSearchButton: t, hasClearButton: n, isSearchDisabled: r, isClearDisabled: s, onSearch: i, onClear: o } = e, { t: c } = Ze();
+  const { hasSearchButton: t = !0, hasClearButton: n = !0, isSearchDisabled: r, isClearDisabled: s, onSearch: i, onClear: o } = e, { t: c } = Ze();
   return /* @__PURE__ */ $("div", { className: hr.searchButtonsContainer, children: [
     t && /* @__PURE__ */ E(
       ke,

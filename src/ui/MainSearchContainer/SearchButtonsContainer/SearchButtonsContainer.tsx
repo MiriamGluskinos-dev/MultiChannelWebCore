@@ -13,7 +13,7 @@ export interface SearchButtonsContainerProps {
 }
 
 const SearchButtonsContainer: FC<SearchButtonsContainerProps> = (props: SearchButtonsContainerProps) => {
-  const { hasSearchButton, hasClearButton, isSearchDisabled, isClearDisabled, onSearch, onClear } = props;
+  const { hasSearchButton = true, hasClearButton = true, isSearchDisabled, isClearDisabled, onSearch, onClear } = props;
   const { t } = useTranslation();
 
   return (
