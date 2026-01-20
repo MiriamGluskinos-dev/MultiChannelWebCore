@@ -27,7 +27,7 @@ const useApiRequest = <T,>(props: ApiRequest): ApiResponse => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const { url, method, data, mock, auto= true} = props;
+  const { url, method, data, mock, auto = true } = props;
 
   const requestFn = mock
     ? (opts: ApiRequest) => mockApiRequest(opts.url, opts.method, opts.data)
@@ -39,8 +39,8 @@ const useApiRequest = <T,>(props: ApiRequest): ApiResponse => {
 
     try {
       console.log('API request:', url, method, data);
-      const result = await requestFn({ url, method, data });
-      console.log('API response: status', result.data? 'ok': 'error');
+      const result = await requestFn({ url, method, data, ...(method === "GET" ? { params: data } : { data }), });
+      console.log('API response: status', result.data ? 'ok' : 'error');
       setResponse(result.data);
       setError(null);
     } catch (err: any) {

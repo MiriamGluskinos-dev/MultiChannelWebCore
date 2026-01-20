@@ -1796,7 +1796,7 @@ const rr = (e) => {
     o(!0);
     try {
       console.log("API request:", c, d, f);
-      const l = await b({ url: c, method: d, data: f });
+      const l = await b({ url: c, method: d, data: f, ...d === "GET" ? { params: f } : { data: f } });
       console.log("API response: status", l.data ? "ok" : "error"), n(l.data), s(null);
     } catch (l) {
       console.error("API request error:", l), s(l?.message ? l : null), n(null);

@@ -24,6 +24,10 @@ const App: FC = () => {
     url: '/shaarolami/CustomspilotWeb/SystemTables/api/GetTableData?tableName=CargoIdentifierType',
     method: 'GET',
     // mock: true,
+    data:{
+      color: 'green',
+      font: '15'
+    },
     auto: false
   });
 
