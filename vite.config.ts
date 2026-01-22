@@ -41,6 +41,7 @@ export default defineConfig({
         'react-dom',
         'react/jsx-runtime',
         'react-i18next',
+        'lit',
         '@igds/core-web',
         '@igds/react',
         '@igds/tokens'
