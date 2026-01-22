@@ -1,7 +1,20 @@
 .link {
-  color: #14365d; // כחול כהה
-  font-size: 1rem;
-  font-weight: 500;
-  border-bottom: 2px solid #14365d;
   cursor: pointer;
+
+  color: var(--text-icon-subtle-primary, #0C3058);
+  text-align: right;
+
+  /* Body/Regular */
+  font-family: Rubik;
+  font-size: var(--font-size-m, 18px);
+  font-style: normal;
+  font-weight: var(--font-weight-regular, 400);
+  line-height: 150%;
+  /* 27px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }

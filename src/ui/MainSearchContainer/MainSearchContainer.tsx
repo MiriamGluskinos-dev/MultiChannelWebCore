@@ -1,6 +1,6 @@
 import { type FC, type ReactNode, useState } from 'react'
 import { Toast } from '@igds/react';
-import Title from '../common/title/Title';
+import Title from '../common/title/title';
 import Link from '../common/link/link';
 import SearchContainer from './SearchContainer/SearchContainer';
 import { useTranslation } from 'react-i18next';

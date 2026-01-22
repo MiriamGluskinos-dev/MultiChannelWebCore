@@ -5,18 +5,14 @@
   justify-content: center;
 
   .title {
-    color: var(--igds-light-ref-dawn-blue-900);
+    color: var(--text-icon-subtle-primary, #0C3058);
     text-align: center;
     font-family: Rubik;
-    font-size: var(--title-size, 32px);
+    font-size: var(--font-size-2xl, 32px);
     font-style: normal;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold, 700);
+    // line-height: 125%; /* 40px */
     line-height: normal;
-    margin: var(--title-margin, 50px) 0 0 0 !important;
-
-    @media (max-width: 600px) {
-      font-size: var(--igds-light-ref-font-size-xl);
-    }
   }
 
   .subTitle {
@@ -28,10 +24,5 @@
     font-weight: 400;
     line-height: 24px;
     max-width: 500px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .titleContainer {
-    padding: 20px;
   }
 }
