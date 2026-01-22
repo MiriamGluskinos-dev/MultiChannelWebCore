@@ -6,7 +6,11 @@ html {
   // direction: rtl;
 // }
 
-html, body, #root {
+#root {
+  min-height: 63vh;
+}
+
+html, body {
     height: 100%;
     font-family: Rubik, sans-serif;
 }
