@@ -2,7 +2,7 @@
 export { default as FieldsGrid } from './common/fieldsGrid/fieldsGrid';
 export { default as Link } from './common/link/link';
 export { default as Button } from './common/button/Button';
-export { default as Title } from './common/title/Title';
+export { default as Title } from './common/title/title';
 
 //components
 
