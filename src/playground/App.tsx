@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
-import type { FC } from 'react';
+import { RootLayout, MainSearchContainer } from '../../src/components';
+import { useApiRequest, useSystemTableApiRequest } from '../../src/api';
+import { Button } from '@igds/react';
 import '../../src/i18n/config';
-import { useApiRequest } from '../../src/api';
-import { RootLayout } from '../../src/ui';
-import useSystemTableApiRequest from '../api/useSystemTableApiRequest';
-import MainSearchContainer from '../../src/ui/MainSearchContainer/MainSearchContainer';
 import './App.css';
 
-const App: FC = () => {
+const App = () => {
   const [click, setClick] = useState(false)
 
   const { response } = useSystemTableApiRequest({
@@ -46,17 +44,16 @@ const App: FC = () => {
 
   return (
     <RootLayout>
-      <h3>Shared Core Playground</h3>
       <MainSearchContainer
-        pageTitle='שאילתת הודעות בוקר:'
-        infoText="הסבר לשאילתה"
+        pageTitle='Query Title Playground'
+        infoText="Query Explanation"
         buttonsProps={{
           isClearDisabled: false,
           isSearchDisabled: true,
         }}
       >
-        <div>I'm the content</div>
-        <button onClick={() => setClick(true)}>sss</button>
+        <div>I'm the content</div><br/>
+        <Button onClick={() => setClick(true)}>Click to fetch Data</Button>
       </MainSearchContainer>
     </RootLayout>
   );

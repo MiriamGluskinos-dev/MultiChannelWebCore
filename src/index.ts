@@ -1,3 +1,3 @@
-import './ui/RootLayout/RootLayout.scss';
 export * from './api';
-export * from './ui';
+export * from './components';
+import './components/RootLayout/RootLayout.scss';
