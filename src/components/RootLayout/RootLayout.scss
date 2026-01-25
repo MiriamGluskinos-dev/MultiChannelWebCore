@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f7ff;
+  background-color: #f1f7ff, var('light.base.color.background.full-screen-default');
   // * {
   // direction: rtl;
   // }

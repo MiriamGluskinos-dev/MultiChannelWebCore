@@ -20,31 +20,32 @@
 
 
     .field-label {
-      color: #666;
-      font-size: 14px;
+      color: #0C3058;
+      font-size: var(--font-size-, 15px);
+      font-weight: var(--font-weight-regular, 400);
+      text-align: right;
       margin-bottom: 4px;
-      // color: #333;
-      font-weight: 500;
     }
 
     .field-value {
-      font-size: 15px;
-      color: #111;
+      color: #0C3058;
+      font-size: var(--font-size-m, 18px);
+      font-weight: var(--font-weight-regular, 400);
 
       &.strong {
-        font-weight: 800;
+        font-weight: var(--font-weight-medium, 500)
       }
 
       &.success {
-        color: #499522 !important;
+        color: var(--text-icon-success, #347314) !important;
       }
 
       &.warning {
-        color: #f0ad4e;
+        color: var(--text-icon-warning-icon, #C60);
       }
 
       &.error {
-        color: #dc3545;
+        color: var(--text-icon-failure, #A72223);
       }
     }
 

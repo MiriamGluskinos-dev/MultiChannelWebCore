@@ -48,8 +48,8 @@ const App = () => {
         pageTitle='Query Title Playground'
         infoText="Query Explanation"
         buttonsProps={{
-          isClearDisabled: false,
-          isSearchDisabled: true,
+          // isClearDisabled: false,
+          // isSearchDisabled: true,
         }}
       >
         <div>I'm the content</div><br/>
