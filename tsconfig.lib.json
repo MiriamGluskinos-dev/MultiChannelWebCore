@@ -13,5 +13,5 @@
     "strict": true
   },
   "include": ["src", "src/i18n/**/*",],
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.stories.tsx"]
+  "exclude": ["node_modules", "dist","src/playground",  "**/*.test.ts", "**/*.stories.tsx"]
 }
