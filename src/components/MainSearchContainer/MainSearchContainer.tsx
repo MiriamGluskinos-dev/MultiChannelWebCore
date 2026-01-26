@@ -3,7 +3,7 @@ import { Toast } from '@igds/react';
 import Title from '../common/title/title';
 import Link from '../common/link/link';
 import SearchContainer from './SearchContainer/SearchContainer';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from '../../i18n';
 import styles from './MainSearchContainer.module.scss';
 import type { SearchButtonsContainerProps } from './SearchButtonsContainer/SearchButtonsContainer';
 

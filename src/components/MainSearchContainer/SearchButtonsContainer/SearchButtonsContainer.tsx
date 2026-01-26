@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import { Button, Icon } from '@igds/react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from '../../../i18n';
 import styles from './SearchButtonsContainer.module.scss';
 
 export interface SearchButtonsContainerProps {
