@@ -51,8 +51,8 @@ const App: FC = () => {
         pageTitle='שאילתת הודעות בוקר:'
         infoText="הסבר לשאילתה"
         buttonsProps={{
-          isClearDisabled: false,
-          isSearchDisabled: true,
+          // isClearDisabled: false,
+          // isSearchDisabled: true,
         }}
       >
         <div>I'm the content</div>
