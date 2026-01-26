@@ -27,9 +27,9 @@
     "axios": "^1.10.0"
   },
   "peerDependencies": {
-    "@igds/core-web": "file:./local-libs/@igds/core-web",
-    "@igds/react": "file:./local-libs/@igds/react",
-    "@igds/tokens": "file:./local-libs/@igds/tokens",
+    "@igds/core-web": "*",
+    "@igds/react": "*",
+    "@igds/tokens": "*",
     "i18next": "^23.4.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.3",
