@@ -1,0 +1,54 @@
+.fields-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  background: #f8f9fa;
+  padding: 20px;
+  direction: rtl;
+
+  .field-item {
+    // background: #fff;
+    padding: 5px;
+    text-align: right;
+    // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    // transition: 0.2s ease;
+
+    // &:hover {
+    //   transform: translateY(-2px);
+    //   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    // }
+
+
+    .field-label {
+      color: #0C3058;
+      font-size: var(--font-size-, 15px);
+      font-weight: var(--font-weight-regular, 400);
+      text-align: right;
+      margin-bottom: 4px;
+    }
+
+    .field-value {
+      color: #0C3058;
+      font-size: var(--font-size-m, 18px);
+      font-weight: var(--font-weight-regular, 400);
+
+      &.strong {
+        font-weight: var(--font-weight-medium, 500)
+      }
+
+      &.success {
+        color: var(--text-icon-success, #347314) !important;
+      }
+
+      &.warning {
+        color: var(--text-icon-warning-icon, #C60);
+      }
+
+      &.error {
+        color: var(--text-icon-failure, #A72223);
+      }
+    }
+
+  }
+
+}

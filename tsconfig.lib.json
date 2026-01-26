@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "ESNext",
+    "resolveJsonModule": true,
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
@@ -12,6 +13,15 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["src", "src/i18n/**/*",],
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.stories.tsx"]
+  "include": [
+    "src",
+    "src/i18n/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/playground",
+    "**/*.test.ts",
+    "**/*.stories.tsx"
+  ]
 }

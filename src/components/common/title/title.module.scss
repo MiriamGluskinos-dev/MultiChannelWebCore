@@ -1,0 +1,22 @@
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    color: var(--text-icon-subtle-primary, #0C3058);
+    text-align: center;
+    font-size: var(--font-size-2xl, 32px);
+    font-weight: var(--font-weight-bold, 700);
+    line-height: normal;
+  }
+
+  .subTitle {
+    color: var(--igds-light-ref-dawn-blue-900);
+    text-align: center;
+    font-size: var(--font-size-m, 18px);
+    font-weight: var(--font-weight-regular, 400);
+    max-width: 500px;
+  }
+}

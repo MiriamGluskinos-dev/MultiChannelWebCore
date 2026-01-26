@@ -1,4 +1,5 @@
-import './ui/RootLayout/RootLayout.scss';
 export * from './api';
-export * from './ui';
+export * from './components';
+export * from './i18n';
+import './components/RootLayout/RootLayout.scss';
 //# sourceMappingURL=index.d.ts.map

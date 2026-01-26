@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+  font-family: Rubik, sans-serif;
+}
+
+body {
+  background-image: url('../../images/BG.png');
+  background-color: #f1f7ff;// var('light.base.color.background.full-screen-default');
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20%;
+  text-align: center;
+  min-height: 63vh !important;
+}
+
+
+.App {
+  text-align: center;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rootLayout {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
