@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { RootLayout, MainSearchContainer } from '../../src/components';
 import { useApiRequest, useSystemTableApiRequest } from '../../src/api';
 import { Button } from '@igds/react';
-import '../../src/i18n/config';
+import '../i18n/index.ts';
 import './App.css';
 
 const App = () => {
