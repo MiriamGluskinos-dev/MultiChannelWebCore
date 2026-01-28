@@ -1,5 +1,4 @@
 import { type ReactNode } from 'react';
-import '@igds/tokens/lib/index.min.css';
 import './RootLayout.scss';
 interface RootLayoutProps {
     children: ReactNode;
