@@ -17,8 +17,8 @@ const mt = async (i, e, t) => new Promise((n) => {
   const [e, t] = U(null), [n, s] = U(null), [r, a] = U(!1), { url: l, method: o, data: f, mock: c, auto: h = !0 } = i, u = async () => {
     a(!0);
     try {
-      const d = await fetch("/shaarolami/CustomspilotWeb/SystemTables/api/GetTableData?tableName=CargoIdentifierType&includeMetadata=true"), g = await d.json();
-      console.log("API response: status", d ? "ok" : "error"), t(d), s(null);
+      const g = await (await fetch("/shaarolami/CustomspilotWeb/SystemTables/api/GetTableData?tableName=CargoIdentifierType")).json();
+      console.log("API response: status", g ? "ok" : "error"), t(g), s(null);
     } catch (d) {
       console.error("API request error:", d), s(d?.message ? d : null), t(null);
     } finally {
@@ -201,7 +201,7 @@ function je(i, e, t, n) {
   } = Y(i, e, Object);
   s[r] = s[r] || [], s[r].push(t);
 }
-function M(i, e) {
+function H(i, e) {
   const {
     obj: t,
     k: n
@@ -210,8 +210,8 @@ function M(i, e) {
     return t[n];
 }
 function Ie(i, e, t) {
-  const n = M(i, t);
-  return n !== void 0 ? n : M(e, t);
+  const n = H(i, t);
+  return n !== void 0 ? n : H(e, t);
 }
 function ge(i, e, t) {
   for (const n in e)
@@ -245,7 +245,7 @@ function Ve(i, e, t) {
   }
   return r;
 }
-function H(i, e) {
+function M(i, e) {
   let t = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : ".";
   if (!i) return;
   if (i[e]) return i[e];
@@ -265,7 +265,7 @@ function H(i, e) {
         if (l && typeof o[l] == "string") return o[l];
       }
       const f = n.slice(r + a).join(t);
-      return f ? H(o, f, t) : void 0;
+      return f ? M(o, f, t) : void 0;
     }
     s = s[n[r]];
   }
@@ -294,8 +294,8 @@ class re extends z {
     const r = s.keySeparator !== void 0 ? s.keySeparator : this.options.keySeparator, a = s.ignoreJSONStructure !== void 0 ? s.ignoreJSONStructure : this.options.ignoreJSONStructure;
     let l = [e, t];
     n && typeof n != "string" && (l = l.concat(n)), n && typeof n == "string" && (l = l.concat(r ? n.split(r) : n)), e.indexOf(".") > -1 && (l = e.split("."));
-    const o = M(this.data, l);
-    return o || !a || typeof n != "string" ? o : H(this.data && this.data[e] && this.data[e][t], n, r);
+    const o = H(this.data, l);
+    return o || !a || typeof n != "string" ? o : M(this.data && this.data[e] && this.data[e][t], n, r);
   }
   addResource(e, t, n, s) {
     let r = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : {
@@ -320,7 +320,7 @@ class re extends z {
       silent: !1
     }, l = [e, t];
     e.indexOf(".") > -1 && (l = e.split("."), s = n, n = t, t = l[1]), this.addNamespaces(t);
-    let o = M(this.data, l) || {};
+    let o = H(this.data, l) || {};
     s ? ge(o, n, r) : o = {
       ...o,
       ...n
@@ -806,7 +806,7 @@ let Ke = [{
     return i == 1 ? 0 : i == 2 ? 1 : (i < 0 || i > 10) && i % 10 == 0 ? 2 : 3;
   }
 };
-const Be = ["v1", "v2", "v3"], Me = ["v4"], le = {
+const Be = ["v1", "v2", "v3"], He = ["v4"], le = {
   zero: 0,
   one: 1,
   two: 2,
@@ -814,7 +814,7 @@ const Be = ["v1", "v2", "v3"], Me = ["v4"], le = {
   many: 4,
   other: 5
 };
-function He() {
+function Me() {
   const i = {};
   return Ke.forEach((e) => {
     e.lngs.forEach((t) => {
@@ -828,7 +828,7 @@ function He() {
 class Je {
   constructor(e) {
     let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-    this.languageUtils = e, this.options = t, this.logger = N.create("pluralResolver"), (!this.options.compatibilityJSON || Me.includes(this.options.compatibilityJSON)) && (typeof Intl > "u" || !Intl.PluralRules) && (this.options.compatibilityJSON = "v3", this.logger.error("Your environment seems not to be Intl API compatible, use an Intl.PluralRules polyfill. Will fallback to the compatibilityJSON v3 format handling.")), this.rules = He();
+    this.languageUtils = e, this.options = t, this.logger = N.create("pluralResolver"), (!this.options.compatibilityJSON || He.includes(this.options.compatibilityJSON)) && (typeof Intl > "u" || !Intl.PluralRules) && (this.options.compatibilityJSON = "v3", this.logger.error("Your environment seems not to be Intl API compatible, use an Intl.PluralRules polyfill. Will fallback to the compatibilityJSON v3 format handling.")), this.rules = Me();
   }
   addRule(e, t) {
     this.rules[e] = t;
@@ -877,7 +877,7 @@ class Je {
 }
 function ue(i, e, t) {
   let n = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : ".", s = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : !0, r = Ie(i, e, t);
-  return !r && s && typeof t == "string" && (r = H(i, t, n), r === void 0 && (r = H(e, t, n))), r;
+  return !r && s && typeof t == "string" && (r = M(i, t, n), r === void 0 && (r = M(e, t, n))), r;
 }
 class _e {
   constructor() {
