@@ -1,6 +1,6 @@
-@igds/core-web:registry=file:./local-libs/@igds/core-web
-@igds/react:registry=file:./local-libs/@igds/react
-@igds/tokens:registry=file:./local-libs/@igds/tokens
+@igds/react:git+https://xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/igds-react
+@igds/core-web:git+https://xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/igds-core-web
+@igds/tokens:git+https://xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/igds-tokens
 
 registry=https://xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/ 
 @esbuild:registry=https://xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/
@@ -19,4 +19,3 @@ strict-ssl=false
 legacy-peer-deps=true
 ;https-proxy=http://192.168.174.80:8080
 ;proxy=http://192.168.174.80:8080
-
