@@ -1,5 +1,5 @@
 import { useEffect, type ReactNode } from 'react';
-// import '@igds/tokens/lib/index.min.css';
+import '@igds/tokens/lib/index.min.css';
 import './RootLayout.scss';
 
 interface RootLayoutProps {
