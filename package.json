@@ -9,6 +9,7 @@
   "style": "multi-channel-core.css",
   "exports": {
     ".": {
+      "types": "dist/index.d.ts",
       "import": "./dist/multi-channel-core.es.js",
       "require": "./dist/multi-channel-core.umd.js"
     },
