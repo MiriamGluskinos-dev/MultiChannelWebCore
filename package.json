@@ -3,10 +3,10 @@
   "private": false,
   "version": "1.0.0",
   "license": "MIT",
-  "main": "dist/multi-channel-core.umd.js",
-  "module": "dist/multi-channel-core.es.js",
-  "types": "dist/index.d.ts",
-  "style": "dist/multi-channel-core.css",
+  "main": "multi-channel-core.umd.js",
+  "module": "multi-channel-core.es.js",
+  "types": "index.d.ts",
+  "style": "multi-channel-core.css",
   "exports": {
     ".": {
       "import": "./dist/multi-channel-core.es.js",
