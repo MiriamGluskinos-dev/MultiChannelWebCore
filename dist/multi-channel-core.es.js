@@ -57,7 +57,7 @@ function fe(n, e, { allOwnKeys: t = !1 } = {}) {
     for (s = 0, r = n.length; s < r; s++)
       e.call(null, n[s], s, n);
   else {
-    if (oe(n))
+    if (ue(n))
       return;
     const i = t ? Object.getOwnPropertyNames(n) : Object.keys(n), o = i.length;
     let a;
@@ -1279,7 +1279,7 @@ const qt = (n) => {
       if (T && u && g !== "get" && g !== "head" && (V = await b(M, x)) !== 0) {
         let U = new t(m, {
           method: "POST",
-          body: w,
+          body: x,
           duplex: "half"
         }), X;
         if (f.isFormData(x) && (X = U.headers.get("content-type")) && M.setContentType(X), U.body) {
@@ -1457,7 +1457,7 @@ Ae.transitional = function(e, t, s) {
     )), e ? e(i, o, a) : !0;
   };
 };
-Te.spelling = function(e) {
+Ae.spelling = function(e) {
   return (t, s) => (console.warn(`${s} is likely a misspelling of ${e}`), !0);
 };
 function As(n, e, t) {
@@ -3429,11 +3429,19 @@ const Zt = () => nn(), wr = "SearchButtonsContainer-module__searchButtonsContain
     n.children && /* @__PURE__ */ P(Or, { buttonsProps: s, children: n.children })
   ] });
 }, ei = (n) => (Nt(() => {
+  if (document.querySelector("script[data-govil='true']")) {
+    console.log("Header-Footer script already loaded");
+    return;
+  }
   const t = document.createElement("script");
-  return t.src = "https://test.newgov.gov.il/Govil.HeaderFooter.Api/govilHF/header-footer.js", t.async = !0, document.body.appendChild(t), () => {
-    document.body.removeChild(t);
+  t.src = "https://www.gov.il/govilHF/header-footer.js", t.async = !0, t.dataset.govil = "true", document.body.appendChild(t);
+  const s = setInterval(() => {
+    typeof window.load_HF == "function" && (clearInterval(s), window.load_HF("he", "", "application", "c0d8ba69-e309-4fe5-801f-855971774a90"), console.log("Header-Footer loaded successfully"));
+  }, 300);
+  return () => {
+    clearInterval(s);
   };
-}, ["test"]), /* @__PURE__ */ P("div", { className: "rootLayout", style: { direction: "rtl" }, children: n.children }));
+}, ["prod"]), /* @__PURE__ */ P("div", { className: "rootLayout", style: { direction: "rtl" }, children: n.children }));
 export {
   Yr as Button,
   Qr as FieldsGrid,
