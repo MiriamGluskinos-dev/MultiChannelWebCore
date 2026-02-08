@@ -26,7 +26,8 @@
     "install:local": "npm install --userconfig .npmrc.local"
   },
   "dependencies": {
-    "axios": "^1.10.0"
+    "axios": "^1.10.0",
+    "@igds/tokens": "https://xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/igds-tokens"
   },
   "peerDependencies": {
     "react": "^19.2.0",
@@ -34,8 +35,7 @@
     "react-i18next": "^14.1.3",
     "i18next": "^23.4.3",
     "@igds/core-web": "*",
-    "@igds/react": "*",
-    "@igds/tokens": "*"
+    "@igds/react": "*"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.1",
