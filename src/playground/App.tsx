@@ -40,6 +40,19 @@ const App = () => {
     }
   }, [click]);
 
+  const { response: res2 } = useApiRequest({
+    url: '/test/consume/meches/dealfile/rest/webdeclaration/v1/WebDeclaration/Entitlements?CustomerExternalId=321550550',
+    headers: {
+      'x-client-id': "token1",
+      'x-client-secret': "token2",
+      'x-scope': "token3",
+    },
+    method: 'GET',
+  });
+
+  useEffect(() => {
+    console.log('--->', res2.data);
+  }, [res2.data]);
 
 
   return (
@@ -52,7 +65,7 @@ const App = () => {
           // isSearchDisabled: true,
         }}
       >
-        <div>I'm the content</div><br/>
+        <div>I'm the content</div><br />
         <Button onClick={() => setClick(true)}>Click to fetch Data</Button>
       </MainSearchContainer>
     </RootLayout>
