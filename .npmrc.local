@@ -1,17 +1,19 @@
-@igds/core-web:registry=file:./local-libs/@igds/core-web
-@igds/react:registry=file:./local-libs/@igds/react
-@igds/tokens:registry=file:./local-libs/@igds/tokens
+@igds/core-web:git=https://xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/igds-core-web
+@igds/react:git=https://xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/igds-react
+@igds/tokens:git=https://xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/igds-tokens
+//xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/:_authToken="MnBnbm4yeHVhZm1oYm5zYW5pbGhuMml3bWhpZWV2ang3bjJiY3N4NnNoZWtlbWRnMnd0YQ=="
 
 registry=https://xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/ 
 @esbuild:registry=https://xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/
 
 ; begin auth token
+
 //xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/:username=DefaultCollection
-//xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/:_password="yourPassword=="
-//xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/:email=yourEmail@taxes.gov.il
+//xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/:_password="MnBnbm4yeHVhZm1oYm5zYW5pbGhuMml3bWhpZWV2ang3bjJiY3N4NnNoZWtlbWRnMnd0YQ=="
+//xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/registry/:email=hadas_ha@taxes.gov.il
 //xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/:username=DefaultCollection
-//xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/:_password="yourPassword=="
-//xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/:email=yourEmail@taxes.gov.il
+//xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/:_password="MnBnbm4yeHVhZm1oYm5zYW5pbGhuMml3bWhpZWV2ang3bjJiY3N4NnNoZWtlbWRnMnd0YQ=="
+//xtfs.head.ad.mehes.gov.il/DefaultCollection/_packaging/npm_artifact_pkg%40Local/npm/:email=hadas_ha@taxes.gov.il
 ; end auth token
 
 always-auth=true
@@ -19,4 +21,3 @@ strict-ssl=false
 legacy-peer-deps=true
 ;https-proxy=http://192.168.174.80:8080
 ;proxy=http://192.168.174.80:8080
-

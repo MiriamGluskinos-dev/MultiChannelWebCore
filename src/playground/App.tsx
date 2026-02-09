@@ -24,7 +24,7 @@ const App = () => {
     // mock: true,
     data: {
       color: 'green',
-      font: '15'
+      font: '6'
     },
     auto: false
   });
