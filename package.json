@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "axios": "^1.10.0",
-     "@igds/tokens": "*"
+     "@igds/tokens": "git+https://xtfs.head.ad.mehes.gov.il/DefaultCollection/general/_git/igds-tokens"
   },
   "peerDependencies": {
     "react": "^19.2.0",
