@@ -22,7 +22,7 @@ const App = () => {
     url: '/shaarolami/CustomspilotWeb/SystemTables/api/GetTableData?tableName=CargoIdentifierType',
     method: 'GET',
     // mock: true,
-    data:{
+    data: {
       color: 'green',
       font: '6'
     },
@@ -59,7 +59,10 @@ const App = () => {
     <RootLayout>
       <MainSearchContainer
         pageTitle='Query Title Playground'
-        infoText="Query Explanation"
+        info={{
+          infoTitle: "Query Explanation Title",
+          infoContent: "Query Explanation\nnew line"
+        }}
         buttonsProps={{
           // isClearDisabled: false,
           // isSearchDisabled: true,
