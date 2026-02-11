@@ -1,9 +1,10 @@
 import type { ColumnDef, TransactionRow } from "./genericTableTypes";
-interface Props {
+interface GenericTableProps {
     rowsData: TransactionRow[];
     columns: ColumnDef[];
+    hasSearch?: boolean;
     onSendCurrentRows?: (rows: TransactionRow[]) => void;
 }
-export default function GenericTable(props: Props): import("react/jsx-runtime").JSX.Element;
-export {};
+declare const GenericTable: (props: GenericTableProps) => import("react/jsx-runtime").JSX.Element;
+export default GenericTable;
 //# sourceMappingURL=genericTable.d.ts.map
