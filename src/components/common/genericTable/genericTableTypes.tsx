@@ -8,6 +8,5 @@ export interface ColumnDef {
 }
 
 export interface TransactionRow {
-  PaymentID: string;
   [key: string]: any;
 }
