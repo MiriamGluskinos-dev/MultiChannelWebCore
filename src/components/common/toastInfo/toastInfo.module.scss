@@ -1,0 +1,15 @@
+ .toastInfoLink {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     width: 100%;
+
+     .toast {
+         width: 100%;
+
+         .toastText {
+             text-align: start;
+             white-space: pre-wrap;
+         }
+     }
+ }

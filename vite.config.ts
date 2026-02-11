@@ -67,6 +67,11 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/shaarolami/, "")
+      },
+      "/test": {
+        target: 'https://apig2g-t.meches.gov.il:13443',
+        changeOrigin: true,
+        secure: false,
       }
     }
   }
