@@ -7,7 +7,6 @@ export interface ColumnDef {
     href?: string;
 }
 export interface TransactionRow {
-    PaymentID: string;
     [key: string]: any;
 }
 //# sourceMappingURL=genericTableTypes.d.ts.map
