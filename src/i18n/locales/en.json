@@ -1,4 +1,7 @@
 {
     "Search": "Search",
-    "Clear": "Clear"
+    "Clear": "Clear",
+    "queryExplanation": "Query Explanation",
+    "noResultsFound": "No results found for this search",
+    "showingItems": "Showing {{start}}-{{end}} of {{total}} items"
 }

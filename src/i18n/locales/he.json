@@ -1,5 +1,7 @@
 {
     "Search": "חיפוש",
     "Clear": "נקה",
-    "queryExplanation":"הסבר לשאילתה"
+    "queryExplanation": "הסבר לשאילתה",
+    "noResultsFound": "לא נמצאו תוצאות לחיפוש זה",
+    "showingItems": "מציג {{start}}-{{end}} מתוך {{total}} פריטים"
 }
