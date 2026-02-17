@@ -1,25 +1,25 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import type { ColumnDef } from "../../components/common/genericTable/genericTableTypes";
+import type { HeaderDef } from "../../components/common/genericTable/genericTableTypes";
 
-export function useResponsiveColumns(columns: ColumnDef[], enabled: boolean = true) {
+export function useResponsiveHeaders(headers: HeaderDef[], enabled: boolean = true) {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [visible, setVisible] = useState<ColumnDef[]>(columns);
-    const [hidden, setHidden] = useState<ColumnDef[]>([]);
+    const [visible, setVisible] = useState<HeaderDef[]>(headers);
+    const [hidden, setHidden] = useState<HeaderDef[]>([]);
     const recalc = () => {
         if (!containerRef.current) return;
 
         const width = containerRef.current.offsetWidth;
         let used = 60; // base padding/margin
-        const v: ColumnDef[] = [];
-        const h: ColumnDef[] = [];
+        const v: HeaderDef[] = [];
+        const h: HeaderDef[] = [];
 
-        for (const col of columns) {
-            const colWidth = 128; // fixed column width
-            if (used + colWidth <= width) {
-                v.push(col);
-                used += colWidth;
+        for (const header of headers) {
+            const headerWidth = header.width || 128; // fixed header width
+            if (used + headerWidth <= width) {
+                v.push(header);
+                used += headerWidth;
             } else {
-                h.push(col);
+                h.push(header);
             }
         }
 
@@ -37,7 +37,7 @@ export function useResponsiveColumns(columns: ColumnDef[], enabled: boolean = tr
         const handleResize = () => requestAnimationFrame(recalc);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, [columns, enabled]);
+    }, [headers, enabled]);
 
     return { containerRef, visible, hidden };
 }

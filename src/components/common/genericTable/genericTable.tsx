@@ -1,25 +1,25 @@
 import { useEffect, useState, useRef, useMemo } from "react";
 import { Input, SearchField, Table, TableHeader, TableRow, Pagination, PaginationItem, Icon, TableCell } from "@igds/react";
 import { useTranslation } from "../../../i18n/useTranslation";
-import { useResponsiveColumns } from "../../../hooks/genericTable/useResponsiveColumns";
+import { useResponsiveHeaders } from "../../../hooks/genericTable/useResponsiveHeaders";
 import { useNumberFormatter } from "../../../hooks/genericTable/useNumberFormatter";
-import type { ColumnDef, TransactionRow } from "./genericTableTypes";
+import type { HeaderDef, TransactionRow } from "./genericTableTypes";
 import styles from "./genericTable.module.scss";
 
 interface GenericTableProps {
+    headers: HeaderDef[];
     rowsData: TransactionRow[];
-    columns: ColumnDef[];
     hasSearch?: boolean;
     onSendCurrentRows?: (rows: TransactionRow[]) => void;
 }
 
 const GenericTable = (props: GenericTableProps) => {
-    const { rowsData, columns, hasSearch = false, onSendCurrentRows } = props;
+    const { rowsData, headers, hasSearch = false, onSendCurrentRows } = props;
     const [rowsPerPage, setRowsPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchText, setSearchText] = useState("");
     const { formatNumberWithCommas } = useNumberFormatter();
-    const { containerRef, visible, hidden } = useResponsiveColumns(columns);
+    const { containerRef, visible, hidden } = useResponsiveHeaders(headers);
     const { t } = useTranslation();
     const paginationRef = useRef<any>(null);
     const formatDate = (date: string) => date ? new Date(date).toLocaleDateString("he-IL") : "";
@@ -40,7 +40,7 @@ const GenericTable = (props: GenericTableProps) => {
         }
     };
 
-    const renderCellContent = (col: ColumnDef, row: TransactionRow) => {
+    const renderCellContent = (col: HeaderDef, row: TransactionRow) => {
         const value = row[col.id as keyof TransactionRow];
 
         if (col.type === "link") {
@@ -94,6 +94,7 @@ const GenericTable = (props: GenericTableProps) => {
         setCurrentPage(1);
     };
 
+
     return (
         <div className={styles.table__box} ref={containerRef} dir="rtl">
             {hasSearch && <div className={styles.searchBox}>
@@ -104,6 +105,7 @@ const GenericTable = (props: GenericTableProps) => {
             <Table>
                 <TableHeader columns={visible} />
                 {currentRows.length > 0 ? currentRows.map((row, index) => (
+
                     <TableRow
                         key={row.PaymentID || index}
                         expanded={hidden.length > 0}
@@ -111,6 +113,7 @@ const GenericTable = (props: GenericTableProps) => {
                             value: renderCellContent(col, row),
                         }) : null).filter(Boolean) as any}
                     >
+
                         {visible.map(col => col.slotted === true && (
                             <TableCell key={col.id}>
                                 {renderCellContent(col, row)}
@@ -131,22 +134,22 @@ const GenericTable = (props: GenericTableProps) => {
                                 ))}
                             </div>
                         )}
-                    </TableRow>
-                    {
-                        row.component &&
+                        {
+                            row.component &&
                             <div className={styles.expandWrapper} style={{ width: "100%", display: "block", marginTop: "0.5rem" }}>
                                 {row.component}
                             </div>
-                    }
+                        }
+                    </TableRow>
                 )) : <TableRow cells={[{ value: t("noResultsFound") || "לא נמצאו תוצאות לחיפוש זה" }]} />}
             </Table>
             <div className={styles.flexVision} style={{ marginTop: '24px' }}>
                 <p>{filteredRows.length > 0 ? t('showingItems', { start: (currentPage - 1) * rowsPerPage + 1, end: Math.min(currentPage * rowsPerPage, filteredRows.length), total: filteredRows.length }) : t('noItemsToShow') || "אין פריטים להצגה"}</p>
                 <section className={styles.flexVisionIn}>
                     <Input type="number" value={rowsPerPage || ""} label={t("rowsPerPage")} min={1} max={1000} onChange={(e: any) => handleRowsNumChange(e.target.value)} />
-                        <Pagination ref={paginationRef} current={currentPage} variant="numbered">
-                            {Array.from({ length: totalPages }, (_, i) => (<PaginationItem key={i + 1} href={`#${i + 1}`} />))}
-                        </Pagination>
+                    <Pagination ref={paginationRef} current={currentPage} variant="numbered">
+                        {Array.from({ length: totalPages }, (_, i) => (<PaginationItem key={i + 1} href={`#${i + 1}`} />))}
+                    </Pagination>
                 </section>
             </div>
         </div>
