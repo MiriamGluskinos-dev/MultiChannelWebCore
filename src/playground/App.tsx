@@ -22,7 +22,7 @@ const App = () => {
     url: '/shaarolami/CustomspilotWeb/SystemTables/api/GetTableData?tableName=CargoIdentifierType',
     method: 'GET',
     // mock: true,
-    data:{
+    data: {
       color: 'green',
       font: '6'
     },
@@ -40,19 +40,35 @@ const App = () => {
     }
   }, [click]);
 
+  const { response: res2 } = useApiRequest({
+    url: '/test/consume/meches/dealfile/rest/webdeclaration/v1/WebDeclaration/Entitlements?CustomerExternalId=321550550',
+    headers: {
+      'x-client-id': "token1",
+      'x-client-secret': "token2",
+      'x-scope': "token3",
+    },
+    method: 'GET',
+  });
+
+  useEffect(() => {
+    console.log('--->', res2.data);
+  }, [res2.data]);
 
 
   return (
     <RootLayout>
       <MainSearchContainer
         pageTitle='Query Title Playground'
-        infoText="Query Explanation"
+        info={{
+          infoTitle: "Query Explanation Title",
+          infoContent: "Query Explanation\nnew line"
+        }}
         buttonsProps={{
           // isClearDisabled: false,
           // isSearchDisabled: true,
         }}
       >
-        <div>I'm the content</div><br/>
+        <div>I'm the content</div><br />
         <Button onClick={() => setClick(true)}>Click to fetch Data</Button>
       </MainSearchContainer>
     </RootLayout>

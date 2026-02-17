@@ -1,31 +1,26 @@
-import { type FC, type ReactNode, useState } from 'react'
-import { Toast } from '@igds/react';
+import { type FC, type ReactNode} from 'react'
 import Title from '../common/title/title';
-import Link from '../common/link/link';
 import SearchContainer from './SearchContainer/SearchContainer';
-import { useTranslation } from '../../i18n';
+import ToastInfo from '../common/toastInfo/toastInfo';
 import styles from './MainSearchContainer.module.scss';
 import type { SearchButtonsContainerProps } from './SearchButtonsContainer/SearchButtonsContainer';
+import type { QueryInfoProps } from '../common/toastInfo/toastInfo';
 
 interface MainSearchContainerProps {
   children?: ReactNode;
   pageTitle: string;
-  infoText?: string;
+  info?: QueryInfoProps;
   buttonsProps?: SearchButtonsContainerProps;
 }
 
 const MainSearchContainer: FC<MainSearchContainerProps> = (props: MainSearchContainerProps) => {
-  const { infoText, pageTitle, buttonsProps } = props;
-  const [showInfo, setShowInfo] = useState(false);
-  const { t } = useTranslation();
+  const { info, pageTitle, buttonsProps } = props;
 
   return (
     <div className={styles.mainSearchContainer}>
       <Title title={pageTitle} subTitle='' />
-      {infoText && <div className={styles.mainSearchInfoLink}>
-        <Link onClick={() => setShowInfo(!showInfo)} text={t('queryExplanation')} />
-        {showInfo && <Toast className={styles.mainSearchToast}>{infoText}</Toast>}
-      </div>}
+      {info?.infoContent &&
+        <ToastInfo infoTitle={info.infoTitle} infoContent={info.infoContent} />}
       {props.children &&
         <SearchContainer buttonsProps={buttonsProps}>
           {props.children}
