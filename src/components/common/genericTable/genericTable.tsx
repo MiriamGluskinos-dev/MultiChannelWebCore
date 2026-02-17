@@ -13,8 +13,8 @@ interface GenericTableProps {
     onSendCurrentRows?: (rows: TransactionRow[]) => void;
 }
 
- const GenericTable = (props: GenericTableProps) => {
-    const {rowsData, columns, hasSearch = false, onSendCurrentRows } = props;
+const GenericTable = (props: GenericTableProps) => {
+    const { rowsData, columns, hasSearch = false, onSendCurrentRows } = props;
     const [rowsPerPage, setRowsPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchText, setSearchText] = useState("");
@@ -93,7 +93,7 @@ interface GenericTableProps {
         setRowsPerPage(value);
         setCurrentPage(1);
     };
-    
+
     return (
         <div className={styles.table__box} ref={containerRef} dir="rtl">
             {hasSearch && <div className={styles.searchBox}>
@@ -132,16 +132,21 @@ interface GenericTableProps {
                             </div>
                         )}
                     </TableRow>
+                    {
+                        row.component &&
+                            <div className={styles.expandWrapper} style={{ width: "100%", display: "block", marginTop: "0.5rem" }}>
+                                {row.component}
+                            </div>
+                    }
                 )) : <TableRow cells={[{ value: t("noResultsFound") || "לא נמצאו תוצאות לחיפוש זה" }]} />}
             </Table>
             <div className={styles.flexVision} style={{ marginTop: '24px' }}>
                 <p>{filteredRows.length > 0 ? t('showingItems', { start: (currentPage - 1) * rowsPerPage + 1, end: Math.min(currentPage * rowsPerPage, filteredRows.length), total: filteredRows.length }) : t('noItemsToShow') || "אין פריטים להצגה"}</p>
                 <section className={styles.flexVisionIn}>
                     <Input type="number" value={rowsPerPage || ""} label={t("rowsPerPage")} min={1} max={1000} onChange={(e: any) => handleRowsNumChange(e.target.value)} />
-                    {totalPages > 1 && (
                         <Pagination ref={paginationRef} current={currentPage} variant="numbered">
                             {Array.from({ length: totalPages }, (_, i) => (<PaginationItem key={i + 1} href={`#${i + 1}`} />))}
-                        </Pagination>)}
+                        </Pagination>
                 </section>
             </div>
         </div>
