@@ -124,8 +124,7 @@ const App = () => {
           // isSearchDisabled: true,
         }}
       >
-        <GenericTable headers={headers} rowsData={rows} hasSearch />
-        <div>I'm the content</div><br />
+        <div>I'm the content</div><br/>
         <Button onClick={() => setClick(true)}>Click to fetch Data</Button>
       </MainSearchContainer>
     </RootLayout>

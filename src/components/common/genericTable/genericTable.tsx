@@ -105,7 +105,6 @@ const GenericTable = (props: GenericTableProps) => {
             <Table>
                 <TableHeader columns={visible} />
                 {currentRows.length > 0 ? currentRows.map((row, index) => (
-
                     <TableRow
                         key={row.PaymentID || index}
                         expanded={hidden.length > 0}
@@ -113,7 +112,6 @@ const GenericTable = (props: GenericTableProps) => {
                             value: renderCellContent(col, row),
                         }) : null).filter(Boolean) as any}
                     >
-
                         {visible.map(col => col.slotted === true && (
                             <TableCell key={col.id}>
                                 {renderCellContent(col, row)}
@@ -147,9 +145,10 @@ const GenericTable = (props: GenericTableProps) => {
                 <p>{filteredRows.length > 0 ? t('showingItems', { start: (currentPage - 1) * rowsPerPage + 1, end: Math.min(currentPage * rowsPerPage, filteredRows.length), total: filteredRows.length }) : t('noItemsToShow') || "אין פריטים להצגה"}</p>
                 <section className={styles.flexVisionIn}>
                     <Input type="number" value={rowsPerPage || ""} label={t("rowsPerPage")} min={1} max={1000} onChange={(e: any) => handleRowsNumChange(e.target.value)} />
-                    <Pagination ref={paginationRef} current={currentPage} variant="numbered">
-                        {Array.from({ length: totalPages }, (_, i) => (<PaginationItem key={i + 1} href={`#${i + 1}`} />))}
-                    </Pagination>
+                    {totalPages > 1 && (
+                        <Pagination ref={paginationRef} current={currentPage} variant="numbered">
+                            {Array.from({ length: totalPages }, (_, i) => (<PaginationItem key={i + 1} href={`#${i + 1}`} />))}
+                        </Pagination>)}
                 </section>
             </div>
         </div>
