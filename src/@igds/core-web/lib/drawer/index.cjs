@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("./drawer.cjs"),e=require("./constants.cjs");Object.defineProperty(exports,"Drawer",{enumerable:!0,get:()=>r.Drawer});exports.ANIMATION_TIMING=e.ANIMATION_TIMING;exports.IGDS_DRAWER_POSITION=e.IGDS_DRAWER_POSITION;

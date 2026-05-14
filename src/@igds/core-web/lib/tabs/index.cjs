@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./tabs.cjs"),t=require("./tab.cjs"),r=require("./tab-panel.cjs");Object.defineProperty(exports,"Tabs",{enumerable:!0,get:()=>e.Tabs});Object.defineProperty(exports,"Tab",{enumerable:!0,get:()=>t.Tab});Object.defineProperty(exports,"TabPanel",{enumerable:!0,get:()=>r.TabPanel});

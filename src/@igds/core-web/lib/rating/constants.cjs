@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@igds/icons");var o=(S=>(S.face="face",S.star="star",S))(o||{});const t=[e.badSmile,e.notGoodSmile,e.okSmile,e.goodSmile,e.excellentSmile],_=["רע","לא טוב","בסדר","טוב","מצוין"];exports.IGDS_RATING_FACE_ICON_NAMES=t;exports.IGDS_RATING_VARIANTS=o;exports.IGDS_VERBAL_RATING_GRADES=_;

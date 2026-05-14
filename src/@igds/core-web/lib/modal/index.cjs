@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./constants.cjs"),t=require("./modal.cjs");exports.DELAY_BEFORE_RECALCULATE_MODAL_HEIGHT=e.DELAY_BEFORE_RECALCULATE_MODAL_HEIGHT;exports.IGDS_MODAL_TYPE=e.IGDS_MODAL_TYPE;Object.defineProperty(exports,"Modal",{enumerable:!0,get:()=>t.Modal});

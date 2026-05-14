@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const i=100,l=166;var t=(e=>(e.default="default",e.header="header",e.indent="indent",e.mobileHeader="mobile-header",e.titleSubtitle="title-subtitle",e))(t||{});exports.DELAY_BEFORE_RECALCULATE_MENU_POSITION=i;exports.IGDS_MENU_VARIANT=t;exports.MENU_WIDTH=l;

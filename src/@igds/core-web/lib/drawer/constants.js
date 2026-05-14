@@ -1,0 +1,6 @@
+export var IGDS_DRAWER_POSITION;
+(function (IGDS_DRAWER_POSITION) {
+    IGDS_DRAWER_POSITION["left"] = "left";
+    IGDS_DRAWER_POSITION["right"] = "right";
+})(IGDS_DRAWER_POSITION || (IGDS_DRAWER_POSITION = {}));
+export const ANIMATION_TIMING = 250;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./audio-recorder.cjs");Object.defineProperty(exports,"AudioRecorder",{enumerable:!0,get:()=>e.AudioRecorder});

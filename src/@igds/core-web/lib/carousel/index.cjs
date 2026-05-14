@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./carousel.cjs"),r=require("./carousel-item.cjs");Object.defineProperty(exports,"Carousel",{enumerable:!0,get:()=>e.Carousel});Object.defineProperty(exports,"CarouselItem",{enumerable:!0,get:()=>r.CarouselItem});

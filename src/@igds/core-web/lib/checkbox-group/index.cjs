@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./checkbox-group.cjs");Object.defineProperty(exports,"CheckboxGroup",{enumerable:!0,get:()=>e.CheckboxGroup});

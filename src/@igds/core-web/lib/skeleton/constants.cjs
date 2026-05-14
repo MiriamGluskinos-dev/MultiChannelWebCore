@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e=(t=>(t.body="body",t.circle="circle",t.rectangular="rectangular",t.subtitle="subtitle",t.title="title",t))(e||{});exports.IGDS_SKELETON_VARIANT=e;

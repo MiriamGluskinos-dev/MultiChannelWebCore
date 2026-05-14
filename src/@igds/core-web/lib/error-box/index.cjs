@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./default-error-box.cjs");Object.defineProperty(exports,"DefaultErrorBox",{enumerable:!0,get:()=>e.DefaultErrorBox});

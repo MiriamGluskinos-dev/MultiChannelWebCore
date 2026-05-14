@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const P=100,t=232;var r=(e=>(e.default="default",e.dividedSearch="divided-search",e.hero="hero",e.searchFilter="search-filter",e))(r||{});exports.DELAY_BEFORE_RECALCULATE_POPUP_POSITION=P;exports.IGDS_SEARCH_FIELD_VARIANTS=r;exports.SEARCH_FIELD_POPUP_MAX_HEIGHT=t;

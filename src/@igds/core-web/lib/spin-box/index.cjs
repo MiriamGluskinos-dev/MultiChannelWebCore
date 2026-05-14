@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./constants.cjs"),t=require("./spin-box.cjs");exports.IGDS_SPIN_BOX_SIZES=e.IGDS_SPIN_BOX_SIZES;Object.defineProperty(exports,"SpinBox",{enumerable:!0,get:()=>t.SpinBox});

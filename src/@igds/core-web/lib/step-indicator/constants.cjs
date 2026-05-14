@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var r=(t=>(t.horizontal="horizontal",t.vertical="vertical",t))(r||{});const e=5;exports.IGDS_STEP_INDICATOR_ORIENTATION=r;exports.MAX_HORIZONTAL_STEPS=e;

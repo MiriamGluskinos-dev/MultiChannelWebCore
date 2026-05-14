@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e=(t=>(t.default="default",t.image="image",t.textCard="text-card",t.withInput="with-input",t))(e||{});const a=/[^a-zA-Z\s]/g;exports.IGDS_RADIO_VARIANTS=e;exports.RADIO_TEXT_ONLY_AND_SPACES_REGULAR_EXPRESSION=a;

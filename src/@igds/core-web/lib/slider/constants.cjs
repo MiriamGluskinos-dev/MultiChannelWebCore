@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e=(I=>(I.range="range",I.single="single",I))(e||{});const E=0,_=5;exports.IGDS_SLIDER_VARIANTS=e;exports.INITIAL_SLIDER_VALUE=E;exports.RANGE_SLIDER_MIN_DISTANCE=_;

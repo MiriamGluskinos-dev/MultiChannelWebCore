@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("../node_modules/.pnpm/@lit_context@1.1.6/node_modules/@lit/context/lib/create-context.cjs"),t=e.createContext(Symbol("segment-context"));exports.segmentContext=t;

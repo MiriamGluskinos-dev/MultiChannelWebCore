@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./igds-element.cjs"),r=require("./angular-form-element.cjs");exports.IGDSElement=e.IGDSElement;exports.AngularFormElement=r.AngularFormElement;

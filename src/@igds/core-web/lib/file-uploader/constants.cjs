@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const s=require("@igds/icons");var l=(e=>(e.default="default",e.fail="fail",e.pending="pending",e.success="success",e))(l||{});const c={default:s.cloudUpload,fail:s.alertCircleOutlined,pending:s.loader,success:s.successOutlined};exports.IGDS_FILE_UPLOADER_ICONS=c;exports.IGDS_FILE_UPLOADER_STATUS=l;

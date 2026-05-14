@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./accordion.cjs"),r=require("./accordion-item.cjs");Object.defineProperty(exports,"Accordion",{enumerable:!0,get:()=>e.Accordion});Object.defineProperty(exports,"AccordionItem",{enumerable:!0,get:()=>r.AccordionItem});

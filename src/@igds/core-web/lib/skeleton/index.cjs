@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./skeleton.cjs"),t=require("./constants.cjs");Object.defineProperty(exports,"Skeleton",{enumerable:!0,get:()=>e.Skeleton});exports.IGDS_SKELETON_VARIANT=t.IGDS_SKELETON_VARIANT;

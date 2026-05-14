@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=e=>e.currentTarget!==e.target,n=e=>e.composedPath()[0]!==e.target;exports.isBubbledEvent=t;exports.isEventInvokedInsideOfShadowDOM=n;

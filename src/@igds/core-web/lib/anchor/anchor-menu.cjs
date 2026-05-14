@@ -1,0 +1,42 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/reactive-element.cjs");const i=require("../node_modules/.pnpm/lit-html@3.3.2/node_modules/lit-html/lit-html.cjs");require("../node_modules/.pnpm/lit-element@4.2.2/node_modules/lit-element/lit-element.cjs");const E=require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/custom-element.cjs"),l=require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/property.cjs"),d=require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/state.cjs"),p=require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/query-assigned-elements.cjs"),_=require("../node_modules/.pnpm/lit-html@3.3.2/node_modules/lit-html/directives/repeat.cjs"),S=require("../node_modules/.pnpm/lit-html@3.3.2/node_modules/lit-html/directives/class-map.cjs"),b=require("../abstractions/igds-element.cjs");require("../abstractions/angular-form-element.cjs");const y=require("../node_modules/.pnpm/@lit_context@1.1.6/node_modules/@lit/context/lib/decorators/provide.cjs"),m=require("./context.cjs"),A=require("../utils/common.cjs");require("../button/button.cjs");const f=require("../button/constants.cjs"),D=require("../constants/breakpoints.cjs"),h=require("../constants/events.cjs"),r=require("../constants/event-keys.cjs"),g=require("../constants/tags.cjs"),v=require("./anchor-menu.scss.cjs"),w=require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/css-tag.cjs");var q=Object.defineProperty,M=Object.getOwnPropertyDescriptor,s=(c,e,t,o)=>{for(var n=o>1?void 0:o?M(e,t):e,a=c.length-1,u;a>=0;a--)(u=c[a])&&(n=(o?u(e,t,n):u(n))||n);return o&&n&&q(e,t,n),n};const I=`(max-width: ${A.getCssValue(D.IGDS_BREAKPOINT_VARS.mobileL,"425px")})`;exports.AnchorMenu=class extends b.IGDSElement{constructor(){super(),this.context=new m.IgdsAnchorContext,this.header="",this.dir="rtl",this.anchors=this.context.getAnchors(),this.selectedAnchorId=null,this._mediaQueryObserver=window.matchMedia(I),this.handleObserverChange=this.handleObserverChange.bind(this)}isMobile(){return this._mediaQueryObserver.matches}connectedCallback(){super.connectedCallback(),this.context.onChangeAnchors=()=>{this.anchors=this.context.getAnchors()},this._mediaQueryObserver.addEventListener("change",this.handleObserverChange)}disconnectedCallback(){super.disconnectedCallback(),this._mediaQueryObserver.removeEventListener("change",this.handleObserverChange)}render(){return i.html`
+      <nav
+        role="navigation"
+        aria-labelledby="anchor-header"
+        aria-live="polite"
+        class="anchor-menu"
+      >
+        <h2 id="anchor-header" class="anchor-menu__header">${this.header}</h2>
+        <ul class="anchor-menu__list">
+          ${_.repeat(this.anchors,e=>i.html`
+              <li>
+                ${this.isMobile()?i.html`
+                      <igds-button
+                        variant=${f.IGDS_BUTTON_VARIANTS.link}
+                        class="anchor-menu__item--mobile"
+                        @focus=${this.onFocus}
+                        @blur=${this.onBlur}
+                        @keydown=${t=>this.onAnchorItemKeyDown(t,e.href)}
+                        @click=${()=>this.handleClick(e.href)}
+                        aria-current=${e.active?"true":"false"}
+                      >
+                        ${e.title}
+                      </igds-button>
+                    `:i.html`
+                      <a
+                        class=${S.classMap({"anchor-menu__item":!0,"anchor-menu__item--ltr":this.dir==="ltr"})}
+                        href="${e.href}"
+                        @click=${()=>this.handleClick(e.href)}
+                        @focus=${this.onFocus}
+                        @blur=${this.onBlur}
+                        @mousedown=${this.onMouseDown}
+                        @mouseup=${this.onMouseUp}
+                        @keydown=${this.onKeyDown}
+                        aria-current=${e.active?"true":"false"}
+                        >${e.title}</a
+                      >
+                    `}
+              </li>
+            `)}
+        </ul>
+      </nav>
+    `}onAnchorItemKeyDown(e,t){if([r.IGDS_EVENT_KEYS.Enter,r.IGDS_EVENT_KEYS.Space].includes(e.key)&&this.isMobile()){e.preventDefault(),window.location.href=t;return}this.onKeyDown(e,t)}onKeyDown(e,t){if([r.IGDS_EVENT_KEYS.ArrowDown,r.IGDS_EVENT_KEYS.ArrowUp,r.IGDS_EVENT_KEYS.Enter,r.IGDS_EVENT_KEYS.Space].includes(e.key)){if([r.IGDS_EVENT_KEYS.Space,r.IGDS_EVENT_KEYS.Enter].includes(e.key)){e.preventDefault(),window.location.href=t;return}e.key===r.IGDS_EVENT_KEYS.ArrowDown&&e.target.parentElement?.nextElementSibling?.firstElementChild?.focus(),e.key===r.IGDS_EVENT_KEYS.ArrowUp&&e.target.parentElement?.previousElementSibling?.firstElementChild?.focus()}}onMouseDown(e){this.setAttribute("data-mouse","true"),e.preventDefault()}onMouseUp(){setTimeout(()=>this.removeAttribute("data-mouse"),0)}handleClick(e){this.isMobile()&&e?window.location.href=e:this.emit(h.IGDS_EVENTS.click,{href:e})}onFocus(){this.emit(h.IGDS_EVENTS.focus)}onBlur(){this.emit(h.IGDS_EVENTS.blur),this.removeAttribute("data-mouse")}handleObserverChange(){this.requestUpdate()}};exports.AnchorMenu.styles=w.unsafeCSS(v);s([y.provide({context:m.igdsAnchorContext})],exports.AnchorMenu.prototype,"context",2);s([l.property({type:String})],exports.AnchorMenu.prototype,"header",2);s([l.property({type:String,reflect:!0})],exports.AnchorMenu.prototype,"dir",2);s([p.queryAssignedElements({slot:"anchor-item"})],exports.AnchorMenu.prototype,"anchorElements",2);s([d.state()],exports.AnchorMenu.prototype,"anchors",2);s([d.state()],exports.AnchorMenu.prototype,"selectedAnchorId",2);exports.AnchorMenu=s([E.customElement(g.IGDS_TAGS.anchorMenu)],exports.AnchorMenu);

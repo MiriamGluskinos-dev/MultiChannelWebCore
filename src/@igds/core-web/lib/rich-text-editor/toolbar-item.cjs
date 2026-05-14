@@ -1,0 +1,12 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/reactive-element.cjs");const m=require("../node_modules/.pnpm/lit-html@3.3.2/node_modules/lit-html/lit-html.cjs");require("../node_modules/.pnpm/lit-element@4.2.2/node_modules/lit-element/lit-element.cjs");const u=require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/custom-element.cjs"),a=require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/property.cjs"),b=require("../node_modules/.pnpm/@lit_context@1.1.6/node_modules/@lit/context/lib/decorators/consume.cjs"),p=require("./rich-text-editor-context.cjs"),d=require("../abstractions/igds-element.cjs");require("../abstractions/angular-form-element.cjs");const T=require("../constants/events.cjs"),h=require("../constants/tags.cjs"),c=require("./constant.cjs"),I=require("./toolbar-item.scss.cjs");require("../icon/icon.cjs");const _=require("../node_modules/.pnpm/@lit_reactive-element@2.1.2/node_modules/@lit/reactive-element/css-tag.cjs");var q=Object.defineProperty,y=Object.getOwnPropertyDescriptor,t=(i,r,n,o)=>{for(var e=o>1?void 0:o?y(r,n):r,s=i.length-1,l;s>=0;s--)(l=i[s])&&(e=(o?l(r,n,e):l(e))||e);return o&&e&&q(r,n,e),e};exports.ToolbarItem=class extends d.IGDSElement{getLabel(){return this.label?this.label:!this.command||c.IGDS_TOOLBAR_DEFAULT_LABEL[this.command]===void 0?"":c.IGDS_TOOLBAR_DEFAULT_LABEL[this.command]}handleClick(){this.emit(T.IGDS_EVENTS.click,{command:this.command})}render(){return m.html`
+      <button
+        class="toolbar-item"
+        type="button"
+        @click=${this.handleClick}
+        aria-label=${this.getLabel()}
+        title=${this.getLabel()}
+        ?disabled=${this.contextData.toolbarDisabled}
+      >
+        <igds-icon node=${this.icon} class="toolbar-item__icon"></igds-icon>
+      </button>
+    `}};exports.ToolbarItem.styles=_.unsafeCSS(I);t([a.property({type:String})],exports.ToolbarItem.prototype,"icon",2);t([a.property({type:String})],exports.ToolbarItem.prototype,"command",2);t([a.property({type:String})],exports.ToolbarItem.prototype,"label",2);t([b.consume({context:p.igdsRichTextEditorContext,subscribe:!0})],exports.ToolbarItem.prototype,"contextData",2);exports.ToolbarItem=t([u.customElement(h.IGDS_TAGS.toolbarItem)],exports.ToolbarItem);

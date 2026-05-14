@@ -1,0 +1,71 @@
+import { PropertyValues } from 'lit';
+import { Placement } from '@floating-ui/dom';
+import { IGDSElement } from '../abstractions';
+import { Item } from './item';
+import { IGDS_EVENT_KEYS, IGDS_PLACEMENTS } from '../constants';
+import { IGDS_MENU_VARIANT } from './constants';
+import type { SlotChangeEvent } from '../utils/types/slot-change-event';
+declare class Menu extends IGDSElement {
+    private CSS_QUERY;
+    private readonly _mediaQueryObserver;
+    constructor();
+    static styles: import("lit").CSSResult;
+    variant: `${IGDS_MENU_VARIANT}`;
+    triggerButton: HTMLElement | string | null;
+    label: string;
+    open: boolean;
+    position: `${IGDS_PLACEMENTS}`;
+    offset: number | null;
+    highlightedId: string | null;
+    highlightedSubMenuId: string | null;
+    isSubMenuShown: boolean;
+    menuElement: HTMLElement;
+    menuElements: Array<HTMLElement>;
+    triggers: Array<HTMLElement>;
+    subMenuItems: Item[];
+    slottedSubMenuItems: Element[];
+    protected firstUpdated(_changedProperties: PropertyValues): void;
+    onSelectMenuItem(event: Event): void;
+    onSelectMenuItemOnMobile(event: CustomEvent): void;
+    initializeTriggerButton(): void;
+    initializeIndentedMenu(): void;
+    handleTriggerChange(event: SlotChangeEvent): void;
+    private toggleMenu;
+    private handleDocumentMouseDown;
+    private setMenuPosition;
+    getPlacement(position: `${IGDS_PLACEMENTS}`): Placement;
+    protected updated(_changedProperties: PropertyValues): void;
+    addStylesToTriggerButtonIcon(): void;
+    disconnectedCallback(): void;
+    private resizeHandler;
+    render(): import("lit").TemplateResult<1>;
+    private isMobile;
+    onBackIconKeyDown(event: KeyboardEvent): void;
+    onBackIconClick(): void;
+    getMenuItems(): HTMLElement[] | undefined;
+    getSlottedMenuItems(): HTMLElement[] | undefined;
+    isRelevantKey(key: IGDS_EVENT_KEYS): boolean;
+    handleEnterOrSpaceDown(key: IGDS_EVENT_KEYS, menuItems: HTMLElement[] | undefined): void;
+    handleEscapeDown(key: IGDS_EVENT_KEYS): void;
+    handleArrowLeftDown(key: IGDS_EVENT_KEYS): void;
+    handleArrowRightDown(key: IGDS_EVENT_KEYS): void;
+    handleNavigateOnOpenSubmenu(key: IGDS_EVENT_KEYS): boolean;
+    getIndex(key: IGDS_EVENT_KEYS, menuItems: HTMLElement[]): number;
+    handleNavigateOnCloseSubmenu(key: IGDS_EVENT_KEYS, menuItems: HTMLElement[] | undefined): void;
+    handleArrowDownWhenNotHighlightedSubmenu(key: IGDS_EVENT_KEYS): boolean;
+    onKeyDown(event: KeyboardEvent): void;
+    removeHighlightedSubmenuClass(): void;
+    focusFirstSubmenuItem(): void;
+    showSubmenuAndAddSubMenuItems(): void;
+    isSubmenuOpen(): boolean;
+    hideSubmenu(): void;
+    removeHighlightedClass(): void;
+    getCurrentItem(): HTMLElement | undefined;
+    setCurrentItem(menuItem: Element): void;
+}
+export { Menu };
+declare global {
+    interface HTMLElementTagNameMap {
+        'igds-menu': Menu;
+    }
+}

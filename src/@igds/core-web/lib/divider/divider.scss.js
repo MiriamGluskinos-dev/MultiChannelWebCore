@@ -1,0 +1,4 @@
+const i = ":host{display:flex;align-self:stretch}.divider{border:0;margin:0;flex-grow:1;width:auto;height:1px;background-color:var(--igds-light-ref-bright-grey-300)}.divider--vertical{width:1px;height:auto}.divider--inset{margin:0 var(--igds-light-ref-space-500)}.divider--vertical.divider--inset{margin:var(--igds-light-ref-space-500) 0}.divider--inverted{background-color:var(--igds-light-ref-white)}";
+export {
+  i as default
+};

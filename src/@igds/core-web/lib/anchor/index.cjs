@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./anchor-menu.cjs"),r=require("./anchor.cjs");Object.defineProperty(exports,"AnchorMenu",{enumerable:!0,get:()=>e.AnchorMenu});Object.defineProperty(exports,"Anchor",{enumerable:!0,get:()=>r.Anchor});

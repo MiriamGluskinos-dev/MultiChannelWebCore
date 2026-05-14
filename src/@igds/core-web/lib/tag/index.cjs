@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./tag.cjs"),r=require("./tag-group.cjs"),t=require("./constants.cjs");Object.defineProperty(exports,"Tag",{enumerable:!0,get:()=>e.Tag});Object.defineProperty(exports,"TagGroup",{enumerable:!0,get:()=>r.TagGroup});exports.IGDS_TAG_SIZES=t.IGDS_TAG_SIZES;

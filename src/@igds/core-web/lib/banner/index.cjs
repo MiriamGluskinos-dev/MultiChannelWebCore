@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./banner.cjs"),r=require("./constants.cjs");Object.defineProperty(exports,"Banner",{enumerable:!0,get:()=>e.Banner});exports.IGDS_BANNER_VARIANT=r.IGDS_BANNER_VARIANT;

@@ -1,0 +1,1 @@
+"use strict";const t=".toast-container{position:fixed;top:0;inset-inline:auto 0;z-index:1000;width:fit-content;padding:0;margin:0;background:transparent;border-style:none}.toast-container:not([open]){display:none}.toast-container[open]{height:fit-content;display:flex;flex-direction:column}";module.exports=t;

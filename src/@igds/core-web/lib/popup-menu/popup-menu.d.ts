@@ -1,0 +1,72 @@
+import { PropertyValues } from 'lit';
+import { IGDSElement } from '../abstractions';
+import { IGDS_TAGS, IGDS_PLACEMENTS } from '../constants';
+import { IGDS_POPUP_MENU_VARIANT } from './constants';
+import { IgdsPopupMenuContext } from './popup-menu-context';
+import type { SlotChangeEvent } from '../utils/types/slot-change-event';
+import { MenuItem } from './types/menu-item';
+import '../icon';
+declare class PopupMenu extends IGDSElement {
+    static styles: import("lit").CSSResult;
+    private triggerElement?;
+    private isAllItemHasIcons;
+    private _open;
+    set open(value: boolean);
+    get open(): boolean;
+    trigger?: string;
+    offset: number;
+    selectedItemId?: string;
+    minWidth: number;
+    maxWidth?: number;
+    variant: `${IGDS_POPUP_MENU_VARIANT}`;
+    placement?: `${IGDS_PLACEMENTS}`;
+    items: MenuItem[];
+    focusedItemId?: string;
+    private dialogElement;
+    private listElement;
+    context: IgdsPopupMenuContext;
+    constructor();
+    connectedCallback(): void;
+    protected firstUpdated(_changedProperties: PropertyValues): void;
+    disconnectedCallback(): void;
+    findTriggerByCssSelector(): void;
+    handleOpenMenu(): void;
+    handleCloseMenu(): void;
+    requestOpen(): void;
+    requestClose(): void;
+    handleEscapeKey(event: Event): void;
+    handleTriggerSlotChange(e: SlotChangeEvent): void;
+    private updatePosition;
+    private calculateMenuHeight;
+    private calculateAvailableBottomSpace;
+    private buildPositionStyles;
+    private calculateHorizontalPosition;
+    private calculateVerticalPosition;
+    private calculateWidth;
+    private calculatePlacementSpecificPosition;
+    private isTopPlacement;
+    private isBottomPlacement;
+    private isEndPlacement;
+    private requestUpdatePosition;
+    private handleClickOutside;
+    handleItemClick({ id }: MenuItem): void;
+    processSelectedIndex(selectedIndex: number): void;
+    handleArrowDown(event: KeyboardEvent, focusedIndex: number): boolean;
+    handleArrowUp(event: KeyboardEvent, focusedIndex: number): boolean;
+    private handleInitialFocus;
+    private findSelectedItemIndex;
+    private handleSelectedItemFocus;
+    private handleFocusedMove;
+    private handleKeyDown;
+    setNextFocusedItemId(index: number): void;
+    setPrevFocusedItemId(index: number): void;
+    scrollToIndexWhenMoveDown(index: number): void;
+    scrollToIndexWhenMoveUp(index: number): void;
+    render(): import("lit").TemplateResult<1>;
+}
+export { PopupMenu };
+declare global {
+    interface HTMLElementTagNameMap {
+        [IGDS_TAGS.popupMenu]: PopupMenu;
+    }
+}

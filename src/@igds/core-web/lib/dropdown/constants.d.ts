@@ -1,0 +1,2 @@
+export declare const DELAY_BEFORE_RECALCULATE_POPUP_POSITION = 100;
+export declare const DROPDOWN_POPUP_MAX_HEIGHT = 290;

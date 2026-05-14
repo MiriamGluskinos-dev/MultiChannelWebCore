@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e=(S=>(S.line="line",S.spinner="spinner",S))(e||{}),r=(S=>(S.large="large",S.small="small",S))(r||{});const l={small:24,large:48},_=0,n=100;exports.IGDS_PROGRESS_BAR_TYPE=e;exports.IGDS_SPINNER_SIZES=r;exports.IGDS_SPINNER_SIZES_MAP=l;exports.PROGRESS_VALUE_MAX=n;exports.PROGRESS_VALUE_MIN=_;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./constants.cjs"),t=require("./radio.cjs");exports.IGDS_RADIO_VARIANTS=e.IGDS_RADIO_VARIANTS;exports.RADIO_TEXT_ONLY_AND_SPACES_REGULAR_EXPRESSION=e.RADIO_TEXT_ONLY_AND_SPACES_REGULAR_EXPRESSION;Object.defineProperty(exports,"RadioButton",{enumerable:!0,get:()=>t.RadioButton});

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var E=(e=>(e.coachMark="coach-mark",e.default="default",e.simple="simple",e))(E||{});const t=250;exports.DELAY_BEFORE_RECALCULATE_MODAL_HEIGHT=t;exports.IGDS_MODAL_TYPE=E;

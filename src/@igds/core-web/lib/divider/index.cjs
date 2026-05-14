@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const I=require("./divider.cjs"),e=require("./constants.cjs");Object.defineProperty(exports,"Divider",{enumerable:!0,get:()=>I.Divider});exports.IGDS_DIVIDER_ORIENTATIONS=e.IGDS_DIVIDER_ORIENTATIONS;exports.IGDS_DIVIDER_WIDTH=e.IGDS_DIVIDER_WIDTH;

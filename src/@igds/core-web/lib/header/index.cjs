@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./header.cjs"),r=require("./constants.cjs");Object.defineProperty(exports,"Header",{enumerable:!0,get:()=>e.Header});exports.IGDS_HEADER_VARIANT=r.IGDS_HEADER_VARIANT;

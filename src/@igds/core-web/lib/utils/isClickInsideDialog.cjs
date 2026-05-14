@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});function t(l,i){return i.top<=l.clientY&&l.clientY<=i.top+i.height&&i.left<=l.clientX&&l.clientX<=i.left+i.width}exports.isClickInsideDialog=t;

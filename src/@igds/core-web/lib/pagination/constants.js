@@ -1,0 +1,6 @@
+export var IGDS_PAGINATION_VARIANT;
+(function (IGDS_PAGINATION_VARIANT) {
+    IGDS_PAGINATION_VARIANT["numbered"] = "numbered";
+    IGDS_PAGINATION_VARIANT["unnumbered"] = "unnumbered";
+})(IGDS_PAGINATION_VARIANT || (IGDS_PAGINATION_VARIANT = {}));
+export const LARGE_MOBILE_WIDTH = 431;

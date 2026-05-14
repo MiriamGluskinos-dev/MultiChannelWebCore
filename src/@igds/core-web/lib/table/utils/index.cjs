@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./isTextCell.cjs"),l=require("./isLinkCell.cjs"),i=require("./isBadgeCell.cjs");exports.isTextCell=e.isTextCell;exports.isLinkCell=l.isLinkCell;exports.isBadgeCell=i.isBadgeCell;

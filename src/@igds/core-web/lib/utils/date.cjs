@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});function d(s){const r=new Date().getTime()-s.getTime(),t=Math.floor(r/1e3),e=Math.floor(t/3600),a=Math.floor(t%3600/60),i=t%60,c=e.toString().padStart(2,"0"),o=a.toString().padStart(2,"0"),n=i.toString().padStart(2,"0");return e===0?`${o}:${n}`:`${c}:${o}:${n}`}exports.computeElapsedTime=d;

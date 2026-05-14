@@ -1,0 +1,1 @@
+export declare const DELAY_BEFORE_CHECKING_TRUNCATED = 250;

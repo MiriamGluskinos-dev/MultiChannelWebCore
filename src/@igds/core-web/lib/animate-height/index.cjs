@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./animate-height.cjs");Object.defineProperty(exports,"AnimateHeight",{enumerable:!0,get:()=>e.AnimateHeight});

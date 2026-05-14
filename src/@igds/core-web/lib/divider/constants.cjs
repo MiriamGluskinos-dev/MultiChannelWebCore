@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var r=(i=>(i.horizontal="igds-horizontal-divider",i.vertical="igds-vertical-divider",i))(r||{}),e=(i=>(i.full="igds-full-divider",i.inset="igds-inset-divider",i))(e||{});exports.IGDS_DIVIDER_ORIENTATIONS=r;exports.IGDS_DIVIDER_WIDTH=e;

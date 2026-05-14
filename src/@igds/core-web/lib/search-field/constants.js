@@ -1,0 +1,9 @@
+export const DELAY_BEFORE_RECALCULATE_POPUP_POSITION = 100;
+export const SEARCH_FIELD_POPUP_MAX_HEIGHT = 232;
+export var IGDS_SEARCH_FIELD_VARIANTS;
+(function (IGDS_SEARCH_FIELD_VARIANTS) {
+    IGDS_SEARCH_FIELD_VARIANTS["default"] = "default";
+    IGDS_SEARCH_FIELD_VARIANTS["dividedSearch"] = "divided-search";
+    IGDS_SEARCH_FIELD_VARIANTS["hero"] = "hero";
+    IGDS_SEARCH_FIELD_VARIANTS["searchFilter"] = "search-filter";
+})(IGDS_SEARCH_FIELD_VARIANTS || (IGDS_SEARCH_FIELD_VARIANTS = {}));

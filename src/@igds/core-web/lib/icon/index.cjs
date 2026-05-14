@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./icon.cjs"),r=require("./icon-sizes.cjs");Object.defineProperty(exports,"Icon",{enumerable:!0,get:()=>e.Icon});exports.IGDS_ICON_SIZES=r.IGDS_ICON_SIZES;

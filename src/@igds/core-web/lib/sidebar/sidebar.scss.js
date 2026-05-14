@@ -1,0 +1,4 @@
+const e = ":host{height:100%;background-color:var(--igds-light-base-color-background-neutral-default)}.sidebar{display:none;flex-direction:column;z-index:1}.sidebar:focus-visible{outline:none}.sidebar--open{display:flex}.sidebar__header{min-height:48px;padding:var(--igds-light-ref-space-400) var(--igds-light-ref-space-300);font-size:var(--igds-light-ref-font-size-xs);line-height:var(--igds-light-ref-line-height-m);color:var(--igds-light-base-color-text-subtle-primary);box-sizing:border-box}";
+export {
+  e as default
+};

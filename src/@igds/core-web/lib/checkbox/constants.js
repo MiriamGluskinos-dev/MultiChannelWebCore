@@ -1,0 +1,7 @@
+export var IGDS_CHECKBOX_VARIANTS;
+(function (IGDS_CHECKBOX_VARIANTS) {
+    IGDS_CHECKBOX_VARIANTS["card"] = "card";
+    IGDS_CHECKBOX_VARIANTS["default"] = "default";
+    IGDS_CHECKBOX_VARIANTS["withInput"] = "with-input";
+})(IGDS_CHECKBOX_VARIANTS || (IGDS_CHECKBOX_VARIANTS = {}));
+export const CHECKBOX_TEXT_ONLY_AND_SPACES_REGULAR_EXPRESSION = /[^a-zA-Z\s]/g;

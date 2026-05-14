@@ -1,0 +1,5 @@
+export var IGDS_POPUP_MENU_VARIANT;
+(function (IGDS_POPUP_MENU_VARIANT) {
+    IGDS_POPUP_MENU_VARIANT["menu"] = "menu";
+    IGDS_POPUP_MENU_VARIANT["popup"] = "popup";
+})(IGDS_POPUP_MENU_VARIANT || (IGDS_POPUP_MENU_VARIANT = {}));

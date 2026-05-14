@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e=(t=>(t.pictureOnly="picture-only",t.textCenter="text-center",t.textRight="text-right",t))(e||{});exports.IGDS_BANNER_VARIANT=e;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("../node_modules/.pnpm/@lit_context@1.1.6/node_modules/@lit/context/lib/create-context.cjs");class e{constructor(){this.toolbarDisabled=!1}}const o=t.createContext(Symbol("igds-anchor"));exports.IgdsRichTextEditorContext=e;exports.igdsRichTextEditorContext=o;

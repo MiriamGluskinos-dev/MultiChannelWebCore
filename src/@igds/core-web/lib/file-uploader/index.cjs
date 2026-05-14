@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("./file-uploader.cjs"),e=require("./constants.cjs");Object.defineProperty(exports,"FileUploader",{enumerable:!0,get:()=>r.FileUploader});exports.IGDS_FILE_UPLOADER_ICONS=e.IGDS_FILE_UPLOADER_ICONS;exports.IGDS_FILE_UPLOADER_STATUS=e.IGDS_FILE_UPLOADER_STATUS;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var r=(e=>(e.numbered="numbered",e.unnumbered="unnumbered",e))(r||{});const n=431;exports.IGDS_PAGINATION_VARIANT=r;exports.LARGE_MOBILE_WIDTH=n;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e=(t=>(t.left="left",t.right="right",t))(e||{});const r=250;exports.ANIMATION_TIMING=r;exports.IGDS_DRAWER_POSITION=e;

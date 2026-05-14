@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var T=(O=>(O.popup="popup",O.standard="standard",O))(T||{});const _=100,E=250,L=240,I=10;exports.ARROW_WIDTH=I;exports.DELAY_BEFORE_CLOSE_TOOLTIP=_;exports.DELAY_BEFORE_RECALCULATE_TOOLTIP_POSITION=E;exports.IGDS_TOOLTIP_TYPE=T;exports.TOOLTIP_MAX_WIDTH=L;

@@ -1,0 +1,4 @@
+const e = ".menu{position:absolute;z-index:var(--igds-light-ref-zindex-800);display:none;background-color:var(--igds-light-base-color-background-neutral-default);box-shadow:var(--igds-light-ref-shadow-7)}.menu--open{display:block}.menu__header{display:flex;flex-flow:row;align-items:center;padding:var(--igds-light-ref-space-400) var(--igds-light-ref-space-300);gap:var(--igds-light-ref-space-200);font-size:var(--igds-light-ref-font-size-xs);line-height:var(--igds-light-ref-line-height-m);color:var(--igds-light-base-color-text-subtle-primary)}.menu__header-icon:focus-visible{outline:var(--igds-light-ref-border-width-m) solid var(--igds-light-base-color-border-focused);border-radius:var(--igds-light-ref-border-radius-full)}";
+export {
+  e as default
+};

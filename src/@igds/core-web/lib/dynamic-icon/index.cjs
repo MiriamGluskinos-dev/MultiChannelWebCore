@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const n=require("./dynamic-icon.cjs"),e=require("./dynamic-icon.types.cjs");Object.defineProperty(exports,"DynamicIcon",{enumerable:!0,get:()=>n.DynamicIcon});exports.ALL_ICON_NAMES=e.ALL_ICON_NAMES;exports.isIconName=e.isIconName;

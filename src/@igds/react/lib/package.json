@@ -1,0 +1,281 @@
+{
+  "name": "@igds/react",
+  "type": "module",
+  "version": "0.1.42",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.esm.js",
+      "require": "./lib/index.cjs.js"
+    },
+    "./accordion": {
+      "types": "./lib/accordion/index.d.ts",
+      "import": "./lib/accordion/index.esm.js",
+      "require": "./lib/accordion/index.cjs.js"
+    },
+    "./anchor": {
+      "types": "./lib/anchor/index.d.ts",
+      "import": "./lib/anchor/index.esm.js",
+      "require": "./lib/anchor/index.cjs.js"
+    },
+    "./badge": {
+      "types": "./lib/badge/index.d.ts",
+      "import": "./lib/badge/index.esm.js",
+      "require": "./lib/badge/index.cjs.js"
+    },
+    "./banner": {
+      "types": "./lib/banner/index.d.ts",
+      "import": "./lib/banner/index.esm.js",
+      "require": "./lib/banner/index.cjs.js"
+    },
+    "./breadcrumbs": {
+      "types": "./lib/breadcrumbs/index.d.ts",
+      "import": "./lib/breadcrumbs/index.esm.js",
+      "require": "./lib/breadcrumbs/index.cjs.js"
+    },
+    "./button": {
+      "types": "./lib/button/index.d.ts",
+      "import": "./lib/button/index.esm.js",
+      "require": "./lib/button/index.cjs.js"
+    },
+    "./card": {
+      "types": "./lib/card/index.d.ts",
+      "import": "./lib/card/index.esm.js",
+      "require": "./lib/card/index.cjs.js"
+    },
+    "./carousel": {
+      "types": "./lib/carousel/index.d.ts",
+      "import": "./lib/carousel/index.esm.js",
+      "require": "./lib/carousel/index.cjs.js"
+    },
+    "./checkbox": {
+      "types": "./lib/checkbox/index.d.ts",
+      "import": "./lib/checkbox/index.esm.js",
+      "require": "./lib/checkbox/index.cjs.js"
+    },
+    "./checkbox-group": {
+      "types": "./lib/checkbox-group/index.d.ts",
+      "import": "./lib/checkbox-group/index.esm.js",
+      "require": "./lib/checkbox-group/index.cjs.js"
+    },
+    "./date-picker": {
+      "types": "./lib/date-picker/index.d.ts",
+      "import": "./lib/date-picker/index.esm.js",
+      "require": "./lib/date-picker/index.cjs.js"
+    },
+    "./divider": {
+      "types": "./lib/divider/index.d.ts",
+      "import": "./lib/divider/index.esm.js",
+      "require": "./lib/divider/index.cjs.js"
+    },
+    "./drawer": {
+      "types": "./lib/drawer/index.d.ts",
+      "import": "./lib/drawer/index.esm.js",
+      "require": "./lib/drawer/index.cjs.js"
+    },
+    "./dropdown": {
+      "types": "./lib/dropdown/index.d.ts",
+      "import": "./lib/dropdown/index.esm.js",
+      "require": "./lib/dropdown/index.cjs.js"
+    },
+    "./file-uploader": {
+      "types": "./lib/file-uploader/index.d.ts",
+      "import": "./lib/file-uploader/index.esm.js",
+      "require": "./lib/file-uploader/index.cjs.js"
+    },
+    "./filters": {
+      "types": "./lib/filter/index.d.ts",
+      "import": "./lib/filter/index.esm.js",
+      "require": "./lib/filter/index.cjs.js"
+    },
+    "./footer": {
+      "types": "./lib/footer/index.d.ts",
+      "import": "./lib/footer/index.esm.js",
+      "require": "./lib/footer/index.cjs.js"
+    },
+    "./header": {
+      "types": "./lib/header/index.d.ts",
+      "import": "./lib/header/index.esm.js",
+      "require": "./lib/header/index.cjs.js"
+    },
+    "./icon": {
+      "types": "./lib/icon/index.d.ts",
+      "import": "./lib/icon/index.esm.js",
+      "require": "./lib/icon/index.cjs.js"
+    },
+    "./dynamic-icon": {
+      "types": "./lib/dynamic-icon/index.d.ts",
+      "import": "./lib/dynamic-icon/index.esm.js",
+      "require": "./lib/dynamic-icon/index.cjs.js"
+    },
+    "./input": {
+      "types": "./lib/input/index.d.ts",
+      "import": "./lib/input/index.esm.js",
+      "require": "./lib/input/index.cjs.js"
+    },
+    "./list": {
+      "types": "./lib/list/index.d.ts",
+      "import": "./lib/list/index.esm.js",
+      "require": "./lib/list/index.cjs.js"
+    },
+    "./menu": {
+      "types": "./lib/menu/index.d.ts",
+      "import": "./lib/menu/index.esm.js",
+      "require": "./lib/menu/index.cjs.js"
+    },
+    "./modal": {
+      "types": "./lib/modal/index.d.ts",
+      "import": "./lib/modal/index.esm.js",
+      "require": "./lib/modal/index.cjs.js"
+    },
+    "./pagination": {
+      "types": "./lib/pagination/index.d.ts",
+      "import": "./lib/pagination/index.esm.js",
+      "require": "./lib/pagination/index.cjs.js"
+    },
+    "./popup-menu": {
+      "types": "./lib/popup-menu/index.d.ts",
+      "import": "./lib/popup-menu/index.esm.js",
+      "require": "./lib/popup-menu/index.cjs.js"
+    },
+    "./profile-picker": {
+      "types": "./lib/profile-picker/index.d.ts",
+      "import": "./lib/profile-picker/index.esm.js",
+      "require": "./lib/profile-picker/index.cjs.js"
+    },
+    "./progress-bar": {
+      "types": "./lib/progress-bar/index.d.ts",
+      "import": "./lib/progress-bar/index.esm.js",
+      "require": "./lib/progress-bar/index.cjs.js"
+    },
+    "./radio": {
+      "types": "./lib/radio/index.d.ts",
+      "import": "./lib/radio/index.esm.js",
+      "require": "./lib/radio/index.cjs.js"
+    },
+    "./radio-group": {
+      "types": "./lib/radio-group/index.d.ts",
+      "import": "./lib/radio-group/index.esm.js",
+      "require": "./lib/radio-group/index.cjs.js"
+    },
+    "./rating": {
+      "types": "./lib/rating/index.d.ts",
+      "import": "./lib/rating/index.esm.js",
+      "require": "./lib/rating/index.cjs.js"
+    },
+    "./rich-text-editor": {
+      "types": "./lib/rich-text-editor/index.d.ts",
+      "import": "./lib/rich-text-editor/index.esm.js",
+      "require": "./lib/rich-text-editor/index.cjs.js"
+    },
+    "./search-field": {
+      "types": "./lib/search-field/index.d.ts",
+      "import": "./lib/search-field/index.esm.js",
+      "require": "./lib/search-field/index.cjs.js"
+    },
+    "./segmented-control": {
+      "types": "./lib/segmented-control/index.d.ts",
+      "import": "./lib/segmented-control/index.esm.js",
+      "require": "./lib/segmented-control/index.cjs.js"
+    },
+    "./sidebar": {
+      "types": "./lib/sidebar/index.d.ts",
+      "import": "./lib/sidebar/index.esm.js",
+      "require": "./lib/sidebar/index.cjs.js"
+    },
+    "./skeleton": {
+      "types": "./lib/skeleton/index.d.ts",
+      "import": "./lib/skeleton/index.esm.js",
+      "require": "./lib/skeleton/index.cjs.js"
+    },
+    "./slider": {
+      "types": "./lib/slider/index.d.ts",
+      "import": "./lib/slider/index.esm.js",
+      "require": "./lib/slider/index.cjs.js"
+    },
+    "./spin-box": {
+      "types": "./lib/spin-box/index.d.ts",
+      "import": "./lib/spin-box/index.esm.js",
+      "require": "./lib/spin-box/index.cjs.js"
+    },
+    "./step-indicator": {
+      "types": "./lib/step-indicator/index.d.ts",
+      "import": "./lib/step-indicator/index.esm.js",
+      "require": "./lib/step-indicator/index.cjs.js"
+    },
+    "./table": {
+      "types": "./lib/table/index.d.ts",
+      "import": "./lib/table/index.esm.js",
+      "require": "./lib/table/index.cjs.js"
+    },
+    "./tabs": {
+      "types": "./lib/tabs/index.d.ts",
+      "import": "./lib/tabs/index.esm.js",
+      "require": "./lib/tabs/index.cjs.js"
+    },
+    "./tag": {
+      "types": "./lib/tag/index.d.ts",
+      "import": "./lib/tag/index.esm.js",
+      "require": "./lib/tag/index.cjs.js"
+    },
+    "./toast": {
+      "types": "./lib/toast/index.d.ts",
+      "import": "./lib/toast/index.esm.js",
+      "require": "./lib/toast/index.cjs.js"
+    },
+    "./toggle": {
+      "types": "./lib/toggle/index.d.ts",
+      "import": "./lib/toggle/index.esm.js",
+      "require": "./lib/toggle/index.cjs.js"
+    },
+    "./tooltip": {
+      "types": "./lib/tooltip/index.d.ts",
+      "import": "./lib/tooltip/index.esm.js",
+      "require": "./lib/tooltip/index.cjs.js"
+    }
+  },
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "build:rollup": "wait-on ./dist && nx run @igds/react:rollup-build && node scripts/rollup-postbuild.cjs",
+    "build:rollup:watch": "wait-on ./dist && nx run @igds/react:rollup-build --watch",
+    "build:tsc": "tsc --build",
+    "build:tsc:watch": "tsc --build --watch",
+    "build": "pnpm run build:tsc && pnpm run build:rollup",
+    "build:watch": "concurrently \"pnpm run build:tsc:watch\" \"pnpm run build:rollup:watch\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "test": "vitest run",
+    "publish": "pnpm view $npm_package_name@$npm_package_version version >/dev/null 2>&1 && echo \"Version $npm_package_name@$npm_package_version already exists in registry. Skipping.\" || pnpm publish --no-git-checks",
+    "storybook": "storybook dev -c ./.storybook -p 6007",
+    "build-storybook": "storybook build -o ./storybook-static-react"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.5.0",
+    "@testing-library/react": "16.0.0",
+    "@testing-library/user-event": "14.5.2",
+    "@vitejs/plugin-react": "4.3.1",
+    "@vitest/browser": "4.0.18",
+    "@vitest/browser-playwright": "4.0.18",
+    "formik": "2.4.6",
+    "playwright": "1.55.1",
+    "vitest": "4.0.18"
+  },
+  "peerDependencies": {
+    "@igds/core-web": "workspace:*",
+    "@igds/tokens": "workspace:*"
+  },
+  "dependencies": {
+    "@lit/react": "^1.0.5"
+  },
+  "publishConfig": {
+    "@igds:registry": "https://gitlab.com/api/v4/projects/60048869/packages/npm/"
+  },
+  "files": [
+    "README.md",
+    "dist/*",
+    "lib/*",
+    "package.json"
+  ],
+  "module": "./index.esm.js",
+  "main": "./index.esm.js",
+  "types": "./index.d.ts"
+}

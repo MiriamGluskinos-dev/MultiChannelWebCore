@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var E=(t=>(t.card="card",t.default="default",t.withInput="with-input",t))(E||{});const e=/[^a-zA-Z\s]/g;exports.CHECKBOX_TEXT_ONLY_AND_SPACES_REGULAR_EXPRESSION=e;exports.IGDS_CHECKBOX_VARIANTS=E;
