@@ -1,25 +1,25 @@
 import { useEffect, useState, useRef, useMemo } from "react";
 import { Input, SearchField, Table, TableHeader, TableRow, Pagination, PaginationItem, Icon, TableCell } from "@igds/react";
 import { useTranslation } from "../../../i18n/useTranslation";
-import { useResponsiveColumns } from "../../../hooks/genericTable/useResponsiveColumns";
+import { useResponsiveHeaders } from "../../../hooks/genericTable/useResponsiveHeaders";
 import { useNumberFormatter } from "../../../hooks/genericTable/useNumberFormatter";
-import type { ColumnDef, TransactionRow } from "./genericTableTypes";
+import type { HeaderDef, TransactionRow } from "./genericTableTypes";
 import styles from "./genericTable.module.scss";
 
 interface GenericTableProps {
+    headers: HeaderDef[];
     rowsData: TransactionRow[];
-    columns: ColumnDef[];
     hasSearch?: boolean;
     onSendCurrentRows?: (rows: TransactionRow[]) => void;
 }
 
- const GenericTable = (props: GenericTableProps) => {
-    const {rowsData, columns, hasSearch = false, onSendCurrentRows } = props;
+const GenericTable = (props: GenericTableProps) => {
+    const { rowsData, headers, hasSearch = false, onSendCurrentRows } = props;
     const [rowsPerPage, setRowsPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchText, setSearchText] = useState("");
     const { formatNumberWithCommas } = useNumberFormatter();
-    const { containerRef, visible, hidden } = useResponsiveColumns(columns);
+    const { containerRef, visible, hidden } = useResponsiveHeaders(headers);
     const { t } = useTranslation();
     const paginationRef = useRef<any>(null);
     const formatDate = (date: string) => date ? new Date(date).toLocaleDateString("he-IL") : "";
@@ -40,7 +40,7 @@ interface GenericTableProps {
         }
     };
 
-    const renderCellContent = (col: ColumnDef, row: TransactionRow) => {
+    const renderCellContent = (col: HeaderDef, row: TransactionRow) => {
         const value = row[col.id as keyof TransactionRow];
 
         if (col.type === "link") {
@@ -93,7 +93,8 @@ interface GenericTableProps {
         setRowsPerPage(value);
         setCurrentPage(1);
     };
-    
+
+
     return (
         <div className={styles.table__box} ref={containerRef} dir="rtl">
             {hasSearch && <div className={styles.searchBox}>
@@ -131,6 +132,12 @@ interface GenericTableProps {
                                 ))}
                             </div>
                         )}
+                        {
+                            row.component &&
+                            <div className={styles.expandWrapper} style={{ width: "100%", display: "block", marginTop: "0.5rem" }}>
+                                {row.component}
+                            </div>
+                        }
                     </TableRow>
                 )) : <TableRow cells={[{ value: t("noResultsFound") || "לא נמצאו תוצאות לחיפוש זה" }]} />}
             </Table>

@@ -11,6 +11,9 @@ export interface ApiResponse {
 export interface ApiRequest {
     url: string;
     method: ApiMethod;
+    headers?: {
+        [key: string]: string;
+    };
     data?: any;
     mock?: boolean;
     auto?: boolean;
